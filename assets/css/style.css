@@ -130,7 +130,16 @@ body {
     color: white;
 }
 
+.btn--black {
+    border-color: black;
+    color: black;
+}
 
+.btn--black:active,
+.btn--black:hover {
+    background-color: tomato;
+    color: white;
+}
 /* --------- Media queries */
 
 @media (max-width: 414px) {
