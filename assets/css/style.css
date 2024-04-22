@@ -130,16 +130,39 @@ body {
     color: white;
 }
 
-.btn--black {
-    border-color: black;
-    color: black;
+.btn--blue {
+    border-color: blue;
+    color: blue;
 }
 
-.btn--black:active,
-.btn--black:hover {
-    background-color: tomato;
+.btn--blue:active,
+.btn--blue:hover {
+    background-color: lightskyblue;
     color: white;
 }
+
+.btn--red {
+    border-color: red;
+    color: red;
+}
+
+.btn--red:active,
+.btn--red:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.btn--green {
+    border-color: green;
+    color: green;
+}
+
+.btn--green:active,
+.btn--green:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
 /* --------- Media queries */
 
 @media (max-width: 414px) {
