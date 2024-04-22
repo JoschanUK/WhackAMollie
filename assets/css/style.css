@@ -57,6 +57,9 @@ body {
    
 }
 
+.game_controls{
+    margin-top: 50%;
+}
 .controls-area {
     width: 60%;
     /*margin: 30px auto;*/
