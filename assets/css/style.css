@@ -40,22 +40,12 @@ body {
     padding: 1%;
     
 }
-
-.question-area {
-    width: 50%;
-    font-size: 2rem;
-    margin: auto;
-    padding: 50px 0;
-}
-
-.question-area span {
-    padding: 0 15px;
-}
-
-.score-area {
-    margin: 5px auto;
-    width: 60%;
-    font-size: 1.2rem;
+.display_area {
+    width: 15%;
+    /*margin: 30px auto;*/
+    margin-left: 200px;
+    color: whitesmoke;
+   
 }
 
 .controls-area {
@@ -64,7 +54,7 @@ body {
     margin-left: 10px;
     
 }
-
+/*
 #score {
     color: green;
     font-weight: bold;
@@ -93,7 +83,7 @@ body {
     display: inline-block;
     padding: 25px;
 }
-
+*/
 /* --------- Buttons */
 
 .btn {
