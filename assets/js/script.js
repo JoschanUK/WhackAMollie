@@ -17,7 +17,13 @@ function runGame(event) {
 
     console.log ('Run Game');
     document.getElementById("message").innerHTML = ('Run Game');
-    showGame();
+    let number = Math.floor(Math.random() * 12) +1;    
+    let selectedbutton = document.getElementById(number);
+    selectedbutton.style.backgroundColor = "red";
+    console.log ('Run game : ' + number);
+    //document.getElementById("message").innerHTML = (number);
+    setTimeout(Timer, 4000, number);
+     
     
 }
 
@@ -50,7 +56,10 @@ function showInfo(event) {
     button_play.style.backgroundColor = "white";
 }
 
-function showGame(event){
-
-          
-}
+function Timer(number) {
+    
+    let selectedbutton = document.getElementById(number);
+    selectedbutton.style.backgroundColor = "white";
+    console.log (number);
+   
+  }
