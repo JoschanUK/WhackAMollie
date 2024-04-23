@@ -60,7 +60,8 @@ body {
 .game_controls{
     margin-top: 50%;
 }
-.controls-area {
+
+#controls-area {
     width: 60%;
     /*margin: 30px auto;*/
     margin-left: 10px;
@@ -190,7 +191,7 @@ body {
 /* --------- Media queries */
 
 @media (max-width: 414px) {
-    .controls-area {
+    #controls-area {
         width: 100%;
     }
 
@@ -249,7 +250,7 @@ body {
         height: 70vh;
     }
 
-    .controls-area {
+    #controls-area {
         width: 75%;
         margin: 10px auto;
     }
