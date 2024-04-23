@@ -24,20 +24,21 @@ function runGame(event) {
     for(let i = 1; i <=total_mole; i++){
         console.log ('No of Mole : ' + i);
         document.getElementById("message").innerHTML = ('Run Game');
-        let number = Math.floor(Math.random() * 12) +1;    
+        
+        /* Create a function to generate a unique number*/ 
+        let number = generate_number();
+        
+        //let number = Math.floor(Math.random() * 12) +1;    
         //let selectedbutton = document.getElementById(number);
         //selectedbutton.style.backgroundColor = "red";
         console.log ('Random No : ' + number);
         //   document.getElementById("message").innerHTML = ('No of Mole +' + number);
         // setTimeout(Timer, 4000, number);
         getDelay_appear(number, i);
+        
      //   getDelay_disappear(number, i);
             
-    }
-
-    
-     
-    
+    }   
 }
 
 function endGame(event) {
@@ -68,12 +69,41 @@ function showInfo(event) {
     button_info.style.backgroundColor = "white";
     button_play.style.backgroundColor = "white";
 }
+
+function generate_number() {
+
+    let haveIt = [];
+    //Generate random number
+    let random = (Math.random() * 12).toFixed();
+
+    //Coerce to number by boxing
+    random = Number(random);
+
+    if(!haveIt.includes(random)) {
+        haveIt.push(random);
+        return random;
+    } else {
+        if(haveIt.length < 12) {
+          //Recursively generate number
+         return  generateUniqueRandom(12);
+        } else {
+          console.log('No more numbers available.')
+          return false;
+        }
+    }
+
+
+
+}
+
+
 function getDelay_appear(number, i){
 
     setTimeout(function(){
 
         let selectedbutton = document.getElementById(number);
         selectedbutton.style.backgroundColor = "red";
+        alert('alert:' + i) //testing code
     }, i * 2000)
     
     
