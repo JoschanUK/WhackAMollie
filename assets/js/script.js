@@ -17,6 +17,7 @@ function runGame(event) {
 
     console.log ('Run Game');
     document.getElementById("demo").innerHTML = ('Run Game');
+    showGame();
     
 }
 
@@ -24,6 +25,7 @@ function endGame(event) {
 
     console.log ('End Game');
     document.getElementById("demo").innerHTML = ('End Game');
+    location.reload();
     
 }
 
@@ -37,14 +39,14 @@ function showInfo(event) {
     showInfo.style.color = 'blue';
     var oldElement = document.getElementById('controls-area');
     oldElement.replaceWith(showInfo);
-    let button_info = document.getElementById('info');
-    button_info.addEventListener("click", showGame);
+    
 }
 
 function showGame(event){
 
-    var showInfo = document.createElement('h1');
-    showInfo.textContent = '<div id="controls-area"><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button></div>';
-    var oldElement = document.getElementById('controls-area');
-    oldElement.replaceWith(showInfo);       
+    var showGamesetup = document.createElement('h1');
+    showGamesetup.textContent = 'test';
+    //'<div id="controls-area"><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button><button class="btn btn--big btn--grey"><i class="fas fa-times"></i></button></div>';
+    var oldInfo = document.getElementById('controls-area');
+    oldInfo.replaceWith(showGamesetup);       
 }
