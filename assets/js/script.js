@@ -1,6 +1,8 @@
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
-/*
+
+/* Level 1 will have 5 mole */
+let total_mole = 5;
 
 /* Creating Event listner for the game control - Start, end and info game */
 
@@ -12,18 +14,27 @@ button_start.addEventListener("click", runGame);
 button_end.addEventListener("click", endGame);
 button_info.addEventListener("click", showInfo);
 
+/* How the game is run */
+/* Level 1 will start with 5 mole with 1 hamburger*/
+
 
 function runGame(event) {
 
+    //let i = 0;
+    for(let i = 1; i <=total_mole; i++){
+        console.log ('No of Mole : ' + i);
+        document.getElementById("message").innerHTML = ('Run Game');
+        let number = Math.floor(Math.random() * 12) +1;    
+        let selectedbutton = document.getElementById(number);
+        selectedbutton.style.backgroundColor = "red";
+        console.log ('Random No : ' + number);
+        //   document.getElementById("message").innerHTML = ('No of Mole +' + number);
+        // setTimeout(Timer, 4000, number);
+        getDelay(number, i);
+            
+    }
+
     
-    console.log ('Run Game');
-    document.getElementById("message").innerHTML = ('Run Game');
-    let number = Math.floor(Math.random() * 12) +1;    
-    let selectedbutton = document.getElementById(number);
-    selectedbutton.style.backgroundColor = "red";
-    console.log ('Run game : ' + number);
-    //document.getElementById("message").innerHTML = (number);
-    setTimeout(Timer, 4000, number);
      
     
 }
@@ -57,10 +68,21 @@ function showInfo(event) {
     button_play.style.backgroundColor = "white";
 }
 
+function getDelay(number, i){
+
+    setTimeout(function(){
+
+        let selectedbutton = document.getElementById(number);
+        selectedbutton.style.backgroundColor = "white";
+    }, i * 4000)
+
+    
+}
+/*
 function Timer(number) {
     
     let selectedbutton = document.getElementById(number);
     selectedbutton.style.backgroundColor = "white";
-    console.log (number);
+    //console.log (number);
    
-  }
+  }*/
