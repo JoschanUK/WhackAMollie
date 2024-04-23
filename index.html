@@ -9,7 +9,7 @@
      <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
 
     <!-- Font Awesomes and Google fonts -->
-    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <!--<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jersey+10&display=swap" rel="stylesheet">
@@ -29,26 +29,26 @@
             <h1 id = "result">000 </h1>
             <div class="game_controls">
                 <div class="tooltip">
-                    <button class="btn--big--control btn--blue play">
+                    <button class="btn--big--control btn--blue" id="play">
                         <i class="fa-regular fa-circle-play"></i>
                         <span class="tooltiptext">Press to play</span>                        
                     </button>
                 </div>
                 <div class="tooltip">
-                    <button class="btn--big--control btn--red end">
+                    <button class="btn--big--control btn--red" id="end">
                         <i class="fa-regular fa-circle-stop"></i>
                         <span class="tooltiptext">Press to end game</span>
                     </button>
                 </div>
                 <div class="tooltip">
-                    <button class="btn--big--control btn--green info">
+                    <button class="btn--big--control btn--green" id="info">
                         <i class="fa-sharp fa-solid fa-circle-info"></i>
                         <span class="tooltiptext">How to play information</span>
                     </button>
                 </div>
             </div>
 
-
+        <p id="demo"></p>
         </div>
 
         <div class="controls-area">
