@@ -25,12 +25,13 @@ function runGame(event) {
         console.log ('No of Mole : ' + i);
         document.getElementById("message").innerHTML = ('Run Game');
         let number = Math.floor(Math.random() * 12) +1;    
-        let selectedbutton = document.getElementById(number);
-        selectedbutton.style.backgroundColor = "red";
+        //let selectedbutton = document.getElementById(number);
+        //selectedbutton.style.backgroundColor = "red";
         console.log ('Random No : ' + number);
         //   document.getElementById("message").innerHTML = ('No of Mole +' + number);
         // setTimeout(Timer, 4000, number);
-        getDelay(number, i);
+        getDelay_appear(number, i);
+     //   getDelay_disappear(number, i);
             
     }
 
@@ -67,8 +68,18 @@ function showInfo(event) {
     button_info.style.backgroundColor = "white";
     button_play.style.backgroundColor = "white";
 }
+function getDelay_appear(number, i){
 
-function getDelay(number, i){
+    setTimeout(function(){
+
+        let selectedbutton = document.getElementById(number);
+        selectedbutton.style.backgroundColor = "red";
+    }, i * 2000)
+    
+    
+}
+
+function getDelay_disappear(number, i){
 
     setTimeout(function(){
 
