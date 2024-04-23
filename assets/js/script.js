@@ -15,6 +15,7 @@ button_info.addEventListener("click", showInfo);
 
 function runGame(event) {
 
+    
     console.log ('Run Game');
     document.getElementById("message").innerHTML = ('Run Game');
     let number = Math.floor(Math.random() * 12) +1;    
