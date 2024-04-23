@@ -58,7 +58,7 @@ body {
 }
 
 .game_controls{
-    margin-top: 50%;
+    margin-top: 30%;
 }
 
 #controls-area {
@@ -179,7 +179,7 @@ body {
 
 .btn--green {
     border-color: green;
-    color: green;
+    color: green;    
 }
 
 .btn--green:active,
