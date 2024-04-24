@@ -22,14 +22,13 @@ function runGame(event) {
 
     
     for(let i = 1; i <=total_mole; i++){
-       //console.log ('No of Mole : ' + i);
+       
         document.getElementById("message").innerHTML = ('Run Game');
         
         /* Create a function to generate a unique number*/ 
           
         let number = Math.floor(Math.random() * 12) +1;    
         let selectedbutton = document.getElementById(number);
-        // selectedbutton.style.backgroundColor = "red";
         console.log ('Random No : ' + number);
         getDelay_appear(number, i);
         getUser_Input(number);
@@ -37,6 +36,7 @@ function runGame(event) {
        // getDelay_disappear(number, i);
 
     }
+    
 }
 function endGame(event) {
 
@@ -73,19 +73,7 @@ function getDelay_appear(number, i){
 
         let selectedbutton = document.getElementById(number);
         selectedbutton.style.backgroundColor = "red";
-       // Timer(number);
        
-        // alert(text);
-        
-        /* To find out if user has click thet button */
-        //let button_userclick = document.getElementById('controls-area').value;
-        //console.log('User :' + button_userclick);
-        /*       
-        if (document.getElementById(number) === document.getElementById('controls-area')) {
-            button_userclick.addEventListener("click", correct_click);
-        } else {
-            button_userclick.addEventListener("click", wrong_click);
-        }*/
     }, i * 2000)
    
 }
@@ -107,51 +95,51 @@ function getUser_Input(number){
 
     button_1.addEventListener("click", function(){
         correct_click(number, '1')
-        console.log('1');
+        
     });
     button_2.addEventListener("click", function(){
         correct_click(number, '2')
-        console.log('2');
+        
     });
     button_3.addEventListener("click", function(){
         correct_click(number, '3')
-        console.log('3');
+   
     });
     button_4.addEventListener("click", function(){
         correct_click(number, '4')
-        console.log('4');
+       
     });
     button_5.addEventListener("click", function(){
         correct_click(number, '5')
-        console.log('5');
+  
     });
     button_6.addEventListener("click", function(){
         correct_click(number, '6')
-        console.log('6');
+    
     });
     button_7.addEventListener("click", function(){
         correct_click(number, '7')
-        console.log('7');
+
     });
     button_8.addEventListener("click", function(){
         correct_click(number, '8')
-        console.log('8');
+    
     });
     button_9.addEventListener("click", function(){
         correct_click(number, '9')
-        console.log('9');
+  
     });
     button_10.addEventListener("click", function(){
         correct_click(number, '10')
-        console.log('10');
+
     });
     button_11.addEventListener("click", function(){
         correct_click(number, '11')
-        console.log('11');
+ 
     });
     button_12.addEventListener("click", function(){
         correct_click(number, '12')
-        console.log('12');
+
     });
 }    
 
@@ -164,31 +152,20 @@ function correct_click(number, user_clickbutton) {
         selectedbutton.style.backgroundColor = "white";
         selectedbutton.style.color= "grey";
         console.log('Right click');
+        score('10');
 
     } else {
         console.log('Wrong click');
+        document.getElementById("message").innerHTML = ('Game Over');
+                
     }
 }
 
-function wrong_click() {
-    console.log('Wrong click')
-}
-
-function getDelay_disappear(number, i){
-
-    setTimeout(function(){
-
-        let selectedbutton = document.getElementById(number);
-        selectedbutton.style.backgroundColor = "white";
-    }, i * 4000)
-
+function score(add_score){
     
-}
-
-function Timer(number) {
-    
-    let selectedbutton = document.getElementById(number);
-    selectedbutton.style.backgroundColor = "white";
-    //console.log (number);
-   
+    const now_score = document.getElementById("result");
+    console.log (now_score.textContent + add_score);
+    const total_score = Number(now_score.textContent) + Number(add_score);
+    document.getElementById("result").innerHTML = (total_score);
+    console.log(total_score);
 }
