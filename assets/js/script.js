@@ -20,27 +20,25 @@ button_info.addEventListener("click", showInfo);
 
 function runGame(event) {
 
-    //let i = 0;
+    
     for(let i = 1; i <=total_mole; i++){
-        console.log ('No of Mole : ' + i);
+       //console.log ('No of Mole : ' + i);
         document.getElementById("message").innerHTML = ('Run Game');
         
         /* Create a function to generate a unique number*/ 
-        let number = generate_number();
-        
-        //let number = Math.floor(Math.random() * 12) +1;    
-        //let selectedbutton = document.getElementById(number);
-        //selectedbutton.style.backgroundColor = "red";
-        console.log ('Random No : ' + number);
-        //   document.getElementById("message").innerHTML = ('No of Mole +' + number);
+          
+        let number = Math.floor(Math.random() * 12) +1;    
+        let selectedbutton = document.getElementById(number);
+       // selectedbutton.style.backgroundColor = "red";
+  //     console.log ('Random No : ' + number);
+           document.getElementById("message").innerHTML = ('No of Mole +' + number);
         // setTimeout(Timer, 4000, number);
-        getDelay_appear(number, i);
+            getDelay_appear(number, i);
         
-     //   getDelay_disappear(number, i);
-            
-    }   
-}
+       // getDelay_disappear(number, i);
 
+    }
+}
 function endGame(event) {
 
     console.log ('End Game');
@@ -70,45 +68,36 @@ function showInfo(event) {
     button_play.style.backgroundColor = "white";
 }
 
-function generate_number() {
-
-    let haveIt = [];
-    //Generate random number
-    let random = (Math.random() * 12).toFixed();
-
-    //Coerce to number by boxing
-    random = Number(random);
-
-    if(!haveIt.includes(random)) {
-        haveIt.push(random);
-        return random;
-    } else {
-        if(haveIt.length < 12) {
-          //Recursively generate number
-         return  generateUniqueRandom(12);
-        } else {
-          console.log('No more numbers available.')
-          return false;
-        }
-    }
-
-
-
-}
-
-
 function getDelay_appear(number, i){
 
     setTimeout(function(){
 
         let selectedbutton = document.getElementById(number);
         selectedbutton.style.backgroundColor = "red";
-        alert('alert:' + i) //testing code
+       // Timer(number);
+       
+        // alert(text);
+        
+        /* To find out if user has click thet button */
+        //let button_userclick = document.getElementById('controls-area').value;
+        //console.log('User :' + button_userclick);
+        /*       
+        if (document.getElementById(number) === document.getElementById('controls-area')) {
+            button_userclick.addEventListener("click", correct_click);
+        } else {
+            button_userclick.addEventListener("click", wrong_click);
+        }*/
     }, i * 2000)
-    
-    
+   
 }
 
+function correct_click() {
+    console.log('Correct click')
+}
+
+function wrong_click() {
+    console.log('Wrong click')
+}
 function getDelay_disappear(number, i){
 
     setTimeout(function(){
@@ -119,11 +108,11 @@ function getDelay_disappear(number, i){
 
     
 }
-/*
+
 function Timer(number) {
     
     let selectedbutton = document.getElementById(number);
     selectedbutton.style.backgroundColor = "white";
     //console.log (number);
    
-  }*/
+}
