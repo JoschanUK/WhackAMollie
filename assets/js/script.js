@@ -159,7 +159,12 @@ function correct_click(number, user_clickbutton) {
 
     console.log(number + user_clickbutton);
     if (number == user_clickbutton){
+        
+        let selectedbutton = document.getElementById(user_clickbutton);
+        selectedbutton.style.backgroundColor = "white";
+        selectedbutton.style.color= "grey";
         console.log('Right click');
+
     } else {
         console.log('Wrong click');
     }
@@ -168,6 +173,7 @@ function correct_click(number, user_clickbutton) {
 function wrong_click() {
     console.log('Wrong click')
 }
+
 function getDelay_disappear(number, i){
 
     setTimeout(function(){
