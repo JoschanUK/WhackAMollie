@@ -29,11 +29,10 @@ function runGame(event) {
           
         let number = Math.floor(Math.random() * 12) +1;    
         let selectedbutton = document.getElementById(number);
-       // selectedbutton.style.backgroundColor = "red";
-  //     console.log ('Random No : ' + number);
-           document.getElementById("message").innerHTML = ('No of Mole +' + number);
-        // setTimeout(Timer, 4000, number);
-            getDelay_appear(number, i);
+        // selectedbutton.style.backgroundColor = "red";
+        console.log ('Random No : ' + number);
+        getDelay_appear(number, i);
+        getUser_Input(number);
         
        // getDelay_disappear(number, i);
 
@@ -91,8 +90,79 @@ function getDelay_appear(number, i){
    
 }
 
-function correct_click() {
-    console.log('Correct click')
+function getUser_Input(number){
+    
+    let button_1 = document.getElementById('1');
+    let button_2 = document.getElementById('2');
+    let button_3 = document.getElementById('3');
+    let button_4 = document.getElementById('4');
+    let button_5 = document.getElementById('5');
+    let button_6 = document.getElementById('6');
+    let button_7 = document.getElementById('7');
+    let button_8 = document.getElementById('8');
+    let button_9 = document.getElementById('9');
+    let button_10 = document.getElementById('10');
+    let button_11 = document.getElementById('11');
+    let button_12 = document.getElementById('12'); 
+
+    button_1.addEventListener("click", function(){
+        correct_click(number, '1')
+        console.log('1');
+    });
+    button_2.addEventListener("click", function(){
+        correct_click(number, '2')
+        console.log('2');
+    });
+    button_3.addEventListener("click", function(){
+        correct_click(number, '3')
+        console.log('3');
+    });
+    button_4.addEventListener("click", function(){
+        correct_click(number, '4')
+        console.log('4');
+    });
+    button_5.addEventListener("click", function(){
+        correct_click(number, '5')
+        console.log('5');
+    });
+    button_6.addEventListener("click", function(){
+        correct_click(number, '6')
+        console.log('6');
+    });
+    button_7.addEventListener("click", function(){
+        correct_click(number, '7')
+        console.log('7');
+    });
+    button_8.addEventListener("click", function(){
+        correct_click(number, '8')
+        console.log('8');
+    });
+    button_9.addEventListener("click", function(){
+        correct_click(number, '9')
+        console.log('9');
+    });
+    button_10.addEventListener("click", function(){
+        correct_click(number, '10')
+        console.log('10');
+    });
+    button_11.addEventListener("click", function(){
+        correct_click(number, '11')
+        console.log('11');
+    });
+    button_12.addEventListener("click", function(){
+        correct_click(number, '12')
+        console.log('12');
+    });
+}    
+
+function correct_click(number, user_clickbutton) {
+
+    console.log(number + user_clickbutton);
+    if (number == user_clickbutton){
+        console.log('Right click');
+    } else {
+        console.log('Wrong click');
+    }
 }
 
 function wrong_click() {
