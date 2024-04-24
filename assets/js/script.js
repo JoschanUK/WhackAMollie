@@ -94,58 +94,59 @@ function getUser_Input(number){
     let button_12 = document.getElementById('12'); 
 
     button_1.addEventListener("click", function(){
-        correct_click(number, '1')
+        correct_click(number, '1');
+        return;
         
     });
     button_2.addEventListener("click", function(){
-        correct_click(number, '2')
-        
+        correct_click(number, '2');
+        return;
     });
     button_3.addEventListener("click", function(){
-        correct_click(number, '3')
-   
+        correct_click(number, '3');
+        return;
     });
     button_4.addEventListener("click", function(){
-        correct_click(number, '4')
-       
+        correct_click(number, '4');
+        return;
     });
     button_5.addEventListener("click", function(){
-        correct_click(number, '5')
-  
+        correct_click(number, '5');
+        return;
     });
     button_6.addEventListener("click", function(){
-        correct_click(number, '6')
-    
+        correct_click(number, '6');
+        return;
     });
     button_7.addEventListener("click", function(){
-        correct_click(number, '7')
-
+        correct_click(number, '7');
+        return;
     });
     button_8.addEventListener("click", function(){
-        correct_click(number, '8')
-    
+        correct_click(number, '8');
+        return;
     });
     button_9.addEventListener("click", function(){
-        correct_click(number, '9')
-  
+        correct_click(number, '9');
+        return;
     });
     button_10.addEventListener("click", function(){
-        correct_click(number, '10')
-
+        correct_click(number, '10');
+        return;
     });
     button_11.addEventListener("click", function(){
-        correct_click(number, '11')
- 
+        correct_click(number, '11');
+        return;
     });
     button_12.addEventListener("click", function(){
-        correct_click(number, '12')
-
+        correct_click(number, '12');
+        return;
     });
 }    
 
 function correct_click(number, user_clickbutton) {
 
-    console.log(number + user_clickbutton);
+    console.log('Random No :' + number + ' User :' +user_clickbutton);
     if (number == user_clickbutton){
         
         let selectedbutton = document.getElementById(user_clickbutton);
@@ -153,6 +154,7 @@ function correct_click(number, user_clickbutton) {
         selectedbutton.style.color= "grey";
         console.log('Right click');
         score('10');
+        return;
 
     } else {
         console.log('Wrong click');
@@ -164,8 +166,8 @@ function correct_click(number, user_clickbutton) {
 function score(add_score){
     
     const now_score = document.getElementById("result");
-    console.log (now_score.textContent + add_score);
+    //console.log (now_score.textContent + add_score);
     const total_score = Number(now_score.textContent) + Number(add_score);
     document.getElementById("result").innerHTML = (total_score);
-    console.log(total_score);
+    console.log('total score:' + total_score);
 }
