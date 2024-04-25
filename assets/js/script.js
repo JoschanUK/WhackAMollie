@@ -68,17 +68,6 @@ function showInfo(event) {
     button_play.style.backgroundColor = "white";
 }
 
-function getDelay_appear(number, i){
-
-    setTimeout(function(){
-
-        let selectedbutton = document.getElementById(number);
-        selectedbutton.style.backgroundColor = "red";
-       
-    }, i * 2000)
-   
-}
-
 function getUser_Input(number){
     
     for(let i = 1; i <=12; i++){
@@ -90,69 +79,6 @@ function getUser_Input(number){
             
         });
     }
-/*
-    let button_1 = document.getElementById('1');
-    let button_2 = document.getElementById('2');
-    let button_3 = document.getElementById('3');
-    let button_4 = document.getElementById('4');
-    let button_5 = document.getElementById('5');
-    let button_6 = document.getElementById('6');
-    let button_7 = document.getElementById('7');
-    let button_8 = document.getElementById('8');
-    let button_9 = document.getElementById('9');
-    let button_10 = document.getElementById('10');
-    let button_11 = document.getElementById('11');
-    let button_12 = document.getElementById('12'); 
-
-    button_1.addEventListener("click", function(){
-        correct_click(number, '1');
-        return;
-        
-    });
-    button_2.addEventListener("click", function(){
-        correct_click(number, '2');
-        return;
-    });
-    button_3.addEventListener("click", function(){
-        correct_click(number, '3');
-        return;
-    });
-    button_4.addEventListener("click", function(){
-        correct_click(number, '4');
-        return;
-    });
-    button_5.addEventListener("click", function(){
-        correct_click(number, '5');
-        return;
-    });
-    button_6.addEventListener("click", function(){
-        correct_click(number, '6');
-        return;
-    });
-    button_7.addEventListener("click", function(){
-        correct_click(number, '7');
-        return;
-    });
-    button_8.addEventListener("click", function(){
-        correct_click(number, '8');
-        return;
-    });
-    button_9.addEventListener("click", function(){
-        correct_click(number, '9');
-        return;
-    });
-    button_10.addEventListener("click", function(){
-        correct_click(number, '10');
-        return;
-    });
-    button_11.addEventListener("click", function(){
-        correct_click(number, '11');
-        return;
-    });
-    button_12.addEventListener("click", function(){
-        correct_click(number, '12');
-        return;
-    });*/
 }    
 
 function correct_click(number, user_clickbutton) {
@@ -183,4 +109,15 @@ function score(add_score){
     const total_score = Number(now_score.textContent) + Number(add_score);
     document.getElementById("result").innerHTML = (total_score);
     console.log('total score:' + total_score);
+}
+
+function getDelay_appear(number, i){
+
+    setTimeout(function(){
+
+        let selectedbutton = document.getElementById(number);
+        selectedbutton.style.backgroundColor = "red";
+       
+    }, i * 2000)
+   
 }
