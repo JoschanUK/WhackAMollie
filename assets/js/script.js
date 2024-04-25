@@ -1,4 +1,5 @@
 
+
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
@@ -29,11 +30,10 @@ function runGame(event) {
         /* Create a function to generate a unique number*/ 
           
         let number = Math.floor(Math.random() * 12) +1;    
-        let selectedbutton = document.getElementById(number);
         console.log ('Random No : ' + number);
-        getDelay_appear(number, i);
         getUser_Input(number);
-        
+        getDelay_appear(number, i);
+                
        // getDelay_disappear(number, i);
 
     }
