@@ -4,7 +4,8 @@
 // Get the button elements and add event listeners to them
 
 /* Level 1 will have 5 mole */
-let total_mole = 5;
+let startMole = 1;
+let totalMole = 5;
 
 /* Creating Event listner for the game control - Start, end and info game */
 
@@ -19,26 +20,30 @@ button_info.addEventListener("click", showInfo);
 /* How the game is run */
 /* Level 1 will start with 5 mole with 1 hamburger*/
 
+function runGame() {
 
-function runGame(event) {
-
+        if (startMole <= totalMole) {
+            let number = Math.floor(Math.random() * 12) + 1; 
+            console.log('startMole: ' + startMole);
+            console.log ('Random No : ' + number);
+            for(let i = 1; i <=12; i++){
     
-    for(let i = 1; i <=total_mole; i++){
-       
-        document.getElementById("message").innerHTML = ('Run Game');
-        
-        /* Create a function to generate a unique number*/ 
-          
-        let number = Math.floor(Math.random() * 12) +1;    
-        console.log ('Random No : ' + number);
-        getUser_Input(number);
-        getDelay_appear(number, i);
-                
-       // getDelay_disappear(number, i);
+                let button = document.getElementById(i);
+                button.addEventListener("click", function(){
+                    setTimeout(correct_click(number, i), 5000);     
+                });
+            }
+              
+            let selectedbutton = document.getElementById(number);
+            selectedbutton.style.backgroundColor = "red";
+            startMole+= 1;
+            
+        } else{
+            document.getElementById("message").innerHTML = ('End Game 1');
+        }
 
-    }
-    
 }
+
 function endGame(event) {
 
     console.log ('End Game');
@@ -68,19 +73,6 @@ function showInfo(event) {
     button_play.style.backgroundColor = "white";
 }
 
-function getUser_Input(number){
-    
-    for(let i = 1; i <=12; i++){
-    
-        let button = document.getElementById(i);
-        button.addEventListener("click", function(){
-            correct_click(number, i);
-            return;
-            
-        });
-    }
-}    
-
 function correct_click(number, user_clickbutton) {
 
     console.log('Random No :' + number + ' User :' +user_clickbutton);
@@ -91,13 +83,12 @@ function correct_click(number, user_clickbutton) {
         selectedbutton.style.color= "grey";
         console.log('Right click');
         score('10');
-        return;
+        runGame();
+        
 
     } else {
         console.log('Wrong click');
-        document.getElementById("message").innerHTML = ('Game Over');
-        //window.stop();
-        
+        document.getElementById("message").innerHTML = ('Game Over');               
                 
     }
 }
