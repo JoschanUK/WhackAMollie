@@ -1,3 +1,4 @@
+
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
@@ -80,6 +81,16 @@ function getDelay_appear(number, i){
 
 function getUser_Input(number){
     
+    for(let i = 1; i <=12; i++){
+    
+        let button = document.getElementById(i);
+        button.addEventListener("click", function(){
+            correct_click(number, i);
+            return;
+            
+        });
+    }
+/*
     let button_1 = document.getElementById('1');
     let button_2 = document.getElementById('2');
     let button_3 = document.getElementById('3');
@@ -141,7 +152,7 @@ function getUser_Input(number){
     button_12.addEventListener("click", function(){
         correct_click(number, '12');
         return;
-    });
+    });*/
 }    
 
 function correct_click(number, user_clickbutton) {
@@ -159,6 +170,8 @@ function correct_click(number, user_clickbutton) {
     } else {
         console.log('Wrong click');
         document.getElementById("message").innerHTML = ('Game Over');
+        //window.stop();
+        
                 
     }
 }
