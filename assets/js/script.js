@@ -1,5 +1,6 @@
 
 
+
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
@@ -101,7 +102,7 @@ function score(add_score){
     document.getElementById("result").innerHTML = (total_score);
     console.log('total score:' + total_score);
 }
-
+/*
 function getDelay_appear(number, i){
 
     setTimeout(function(){
@@ -111,4 +112,4 @@ function getDelay_appear(number, i){
        
     }, i * 2000)
    
-}
+}*/
