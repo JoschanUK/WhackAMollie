@@ -9,6 +9,7 @@
 let startMole = 1;
 let totalMole = 5;
 let whichButton = 0;
+let level = 2;
 
 /* Creating Event listner for the game control - Start, end and info game */
 
@@ -42,12 +43,22 @@ function runGame() {
             selectedbutton.style.backgroundColor = "red";
     
         } else{
-            document.getElementById("message").innerHTML = ('End Game 1');
+            document.getElementById("message").innerHTML = ('Proceed to Level ' + level);
+            //document.getElementById("level").innerHTML = ('Level ' + level);
+            increaseLevel();
+            runGame();
         
         }
         startMole+= 1;
+        
 
 }
+function increaseLevel(){
+    document.getElementById("level").innerHTML = ('Level ' + level);
+    level+=1;
+    startMole = 1;
+}
+
 
 function endGame(event) {
 
