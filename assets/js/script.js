@@ -1,6 +1,7 @@
 
 
 
+
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
@@ -25,13 +26,15 @@ function runGame() {
 
         if (startMole <= totalMole) {
             let number = Math.floor(Math.random() * 12) + 1; 
-            console.log('startMole: ' + startMole);
-            console.log ('Random No : ' + number);
+           // console.log('startMole: ' + startMole);
+           // console.log ('Random No : ' + number);
             for(let i = 1; i <=12; i++){
     
                 let button = document.getElementById(i);
                 button.addEventListener("click", function(){
-                    setTimeout(correct_click(number, i), 5000);     
+                   // setTimeout(correct_click(number, i), 5000);
+                       
+                  correct_click(number, i); 
                 });
             }
               
@@ -82,13 +85,13 @@ function correct_click(number, user_clickbutton) {
         let selectedbutton = document.getElementById(user_clickbutton);
         selectedbutton.style.backgroundColor = "white";
         selectedbutton.style.color= "grey";
-        console.log('Right click');
+        //console.log('Right click');
         score('10');
         runGame();
         
 
     } else {
-        console.log('Wrong click');
+        //console.log('Wrong click');
         document.getElementById("message").innerHTML = ('Game Over');               
                 
     }
