@@ -8,6 +8,7 @@
 /* Level 1 will have 5 mole */
 let startMole = 1;
 let totalMole = 5;
+let whichButton = 0;
 
 /* Creating Event listner for the game control - Start, end and info game */
 
@@ -24,27 +25,27 @@ button_info.addEventListener("click", showInfo);
 
 function runGame() {
 
-        if (startMole <= totalMole) {
+            if (startMole <= totalMole) {
+            
             let number = Math.floor(Math.random() * 12) + 1; 
            // console.log('startMole: ' + startMole);
-           // console.log ('Random No : ' + number);
+            console.log ('Random No : ' + number);
             for(let i = 1; i <=12; i++){
     
                 let button = document.getElementById(i);
                 button.addEventListener("click", function(){
-                   // setTimeout(correct_click(number, i), 5000);
-                       
-                  correct_click(number, i); 
-                });
+                                           
+                   correct_click(number, i); 
+                 });
             }
-              
-            let selectedbutton = document.getElementById(number);
+           let selectedbutton = document.getElementById(number);
             selectedbutton.style.backgroundColor = "red";
-            startMole+= 1;
-            
+    
         } else{
             document.getElementById("message").innerHTML = ('End Game 1');
+        
         }
+        startMole+= 1;
 
 }
 
@@ -105,14 +106,3 @@ function score(add_score){
     document.getElementById("result").innerHTML = (total_score);
     console.log('total score:' + total_score);
 }
-/*
-function getDelay_appear(number, i){
-
-    setTimeout(function(){
-
-        let selectedbutton = document.getElementById(number);
-        selectedbutton.style.backgroundColor = "red";
-       
-    }, i * 2000)
-   
-}*/
