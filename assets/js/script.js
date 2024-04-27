@@ -19,8 +19,7 @@ document.addEventListener("DOMContentLoaded", function(){
          button.addEventListener("click", function () {
 
             /* After a user click on the button, check click against array */
-            correct_click(listOfNumbers[whichButton-1], i);
-            console.log ('after eventlistener: ' + whichButton);
+            correct_click(listOfNumbers[whichButton-1], i); 
          });
          
      }
@@ -46,33 +45,27 @@ let listOfNumbers = [];
 
 function runGame() {
 
-    
-    /* Generate 5 random numbers and place in array */
-   /* listOfNumbers = generateNumber();
-    for (test=0; test<5; test++){
-        console.log('list of numbers ' + test + " - " + listOfNumbers[test]);
-    }*/
-
-    
-    //if (startMole <= totalMole) {
- 
-        let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
-        selectedbutton.style.backgroundColor = "red";
-
-   /* } else{
-        document.getElementById("message").innerHTML = ('Proceed to Level ' + level);
-        //document.getElementById("level").innerHTML = ('Level ' + level);
-        //increaseLevel();
-        //runGame();
-    
-    }*/
-    startMole+= 1;
-    
+            console.log('startMole' + startMole);
+            if (startMole != 6) {
+                let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
+                selectedbutton.style.backgroundColor = "red";
+                startMole+= 1;
+            }
+            else {
+                increaseLevel();
+            }
+        
 }
+
 function increaseLevel(){
     document.getElementById("level").innerHTML = ('Level ' + level);
     level+=1;
+    /* Reset global variables */
     startMole = 1;
+    whichButton = 1;
+    listOfNumbers = [];
+    listOfNumbers = generateNumber();
+    runGame();
 }
 
 function generateNumber() {
@@ -81,7 +74,7 @@ function generateNumber() {
     for (i = 0; i<5; i++){
         numbers[i] = Math.floor(Math.random() * 12) + 1;    
     }
-    console.log(numbers);
+    console.log('generateNumber : ' + numbers);
     return numbers;
     
 
@@ -124,7 +117,7 @@ function correct_click(number, user_clickbutton) {
         let selectedbutton = document.getElementById(user_clickbutton);
         selectedbutton.style.backgroundColor = "white";
         selectedbutton.style.color= "grey";
-        console.log('Right click');
+        //console.log('Right click');
         score('10');
         whichButton+= 1;
         runGame();
