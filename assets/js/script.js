@@ -72,11 +72,7 @@ function increaseLevel(){
     level+=1;
     runGame();
 }
-function timeOutmessage() {
 
-    document.getElementById("message").innerHTML = ('Ready, Steady, Go !');
-
-}
 
 function generateNumber() {
 
@@ -137,7 +133,11 @@ function correct_click(number, user_clickbutton) {
 
     } else {
        // console.log('Wrong click');
-        document.getElementById("message").innerHTML = ('Game Over');               
+        document.getElementById("message").innerHTML = ('Game Over'); 
+        alert('Game Over -  Click red button to restart ...');
+        throw ('Game Over');  
+        
+
                 
     }
 }
