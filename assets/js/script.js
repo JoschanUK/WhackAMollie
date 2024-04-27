@@ -95,7 +95,7 @@ function showInfo(event) {
     console.log ('Show Info');
     document.getElementById("message").innerHTML = ('Click stop button to refresh');
     var showInfo = document.createElement('h1');
-    showInfo.textContent = 'Mollie is a very cheeky mole living in the northern part of England. She loves to pop into the house to steal your food. What you need to do is to hit Mollie when she appears. She also likes to eat your hamburgers. So when the hamburger appears, take it back from Mollie by clicking on it and you will get extra points.';
+    showInfo.textContent = 'Mollie is a very cheeky mole living in the northern part of England. She loves to pop into the house to steal your food. What you need to do is to hit Mollie when she appears. She also likes to eat your hamburgers. So when the hamburger appears, take it back from Mollie by clicking on it and you will get extra points.     <Press the red button to continue>';
     showInfo.style.color = 'grey';
     showInfo.style.backgroundColor = "white";
     showInfo.style.width = '60%';
