@@ -1,73 +1,57 @@
+
+
+
+
 // Wait for the DOM to finish loading before running the game
 // Get the button elements and add event listeners to them
 
-document.addEventListener("DOMContentLoaded", function(){
-    /* Creating Event listner for the game control - Start, end and info game */
-    
-    let button_start = document.getElementById('play');
-    let button_end = document.getElementById('end');
-    let button_info = document.getElementById('info');
-
-    button_start.addEventListener("click", runGame);
-    button_end.addEventListener("click", endGame);
-    button_info.addEventListener("click", showInfo);
-    
-    /* For loop to addEventListener to the game-area 12 buttons */
-    for (let i = 1; i <= 12; i++) {
-
-        let button = document.getElementById(i);
-         button.addEventListener("click", function () {
-
-            /* After a user click on the button, check click against array */
-            correct_click(listOfNumbers[whichButton-1], i);
-            console.log ('after eventlistener: ' + whichButton);
-         });
-         
-     }
-     whichButton+= 1;
-
-});
 /* Level 1 will have 5 mole */
 let startMole = 1;
 let totalMole = 5;
 let whichButton = 0;
 let level = 2;
-let listOfNumbers = [];
 
- /* Generate 5 random numbers and place in array */
-   
- listOfNumbers = generateNumber();
-    for (test=0; test<5; test++){
-        console.log('list of numbers ' + test + " - " + listOfNumbers[test]);
-    }
+/* Creating Event listner for the game control - Start, end and info game */
+
+let button_start = document.getElementById('play');
+let button_end = document.getElementById('end');
+let button_info = document.getElementById('info');
+
+button_start.addEventListener("click", runGame);
+button_end.addEventListener("click", endGame);
+button_info.addEventListener("click", showInfo);
 
 /* How the game is run */
 /* Level 1 will start with 5 mole with 1 hamburger*/
 
 function runGame() {
 
-    
-    /* Generate 5 random numbers and place in array */
-   /* listOfNumbers = generateNumber();
-    for (test=0; test<5; test++){
-        console.log('list of numbers ' + test + " - " + listOfNumbers[test]);
-    }*/
+    if (startMole <= totalMole) {
+            
+        let number = Math.floor(Math.random() * 12) + 1; 
+       
+        console.log ('Random No : ' + number);
+        for(let i = 1; i <=12; i++){
 
-    
-    //if (startMole <= totalMole) {
- 
-        let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
+            let button = document.getElementById(i);
+            button.addEventListener("click", function(){
+                console.log('Bef Random No :' + number + ' User :' + i);                       
+               correct_click(number, i); 
+               
+               console.log('Random No :' + number + ' User :' + i);
+             });
+        }
+       let selectedbutton = document.getElementById(number);
         selectedbutton.style.backgroundColor = "red";
 
-   /* } else{
+    } else{
         document.getElementById("message").innerHTML = ('Proceed to Level ' + level);
         //document.getElementById("level").innerHTML = ('Level ' + level);
         //increaseLevel();
         //runGame();
     
-    }*/
+    }
     startMole+= 1;
-    
 }
 function increaseLevel(){
     document.getElementById("level").innerHTML = ('Level ' + level);
@@ -75,17 +59,6 @@ function increaseLevel(){
     startMole = 1;
 }
 
-function generateNumber() {
-
-    let numbers = [];
-    for (i = 0; i<5; i++){
-        numbers[i] = Math.floor(Math.random() * 12) + 1;    
-    }
-    console.log(numbers);
-    return numbers;
-    
-
-}
 
 function endGame(event) {
 
@@ -118,15 +91,14 @@ function showInfo(event) {
 
 function correct_click(number, user_clickbutton) {
 
-    console.log('Random No :' + number + ' User :' +user_clickbutton);
+    //console.log('Random No :' + number + ' User :' +user_clickbutton);
     if (number == user_clickbutton){
         
         let selectedbutton = document.getElementById(user_clickbutton);
         selectedbutton.style.backgroundColor = "white";
         selectedbutton.style.color= "grey";
-        console.log('Right click');
+       // console.log('Right click');
         score('10');
-        whichButton+= 1;
         runGame();
         
 

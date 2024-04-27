@@ -102,7 +102,7 @@ body {
 }
 */
 /* --------- Buttons */
-/*
+
 .btn {
     width: 220px;
     height: 60px;
@@ -114,7 +114,7 @@ body {
 
 .btn:focus {
     outline: none;
-}*/
+}
 
 .btn--big {
     padding-top: 5px;
