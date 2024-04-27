@@ -19,7 +19,8 @@ document.addEventListener("DOMContentLoaded", function(){
          button.addEventListener("click", function () {
 
             /* Display the whack image over the button */
-             //button.style.backgroundColor = ("../assets/images/whack.png");
+           // button.innerHTML = '<img src="assets/images/whack.png" />';
+            
             /* After a user click on the button, check click against array */
             correct_click(listOfNumbers[whichButton-1], i); 
          });
@@ -61,13 +62,20 @@ function runGame() {
 
 function increaseLevel(){
     document.getElementById("level").innerHTML = ('Level ' + level);
-    level+=1;
+    
     /* Reset global variables */
     startMole = 1;
     whichButton = 1;
     listOfNumbers = [];
     listOfNumbers = generateNumber();
+    alert('Level ' + level + ' - ' + 'Ready , Steady ... Go!'  );
+    level+=1;
     runGame();
+}
+function timeOutmessage() {
+
+    document.getElementById("message").innerHTML = ('Ready, Steady, Go !');
+
 }
 
 function generateNumber() {
