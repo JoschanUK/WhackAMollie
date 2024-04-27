@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function(){
         let button = document.getElementById(i);
          button.addEventListener("click", function () {
 
+            /* Display the whack image over the button */
+             //button.style.backgroundColor = ("../assets/images/whack.png");
             /* After a user click on the button, check click against array */
             correct_click(listOfNumbers[whichButton-1], i); 
          });
@@ -93,8 +95,10 @@ function showInfo(event) {
     console.log ('Show Info');
     document.getElementById("message").innerHTML = ('Click stop button to refresh');
     var showInfo = document.createElement('h1');
-    showInfo.textContent = 'Mollies is a very cheeky mole living in the northern part of England. She loves to pop into the house to steal your food. What you need to do is to hit Mollie when she appears. She also likes to eat your hamburgers. So when the hamburger appears, take it back from Mollie by clicking on it and you will get extra points.';
+    showInfo.textContent = 'Mollie is a very cheeky mole living in the northern part of England. She loves to pop into the house to steal your food. What you need to do is to hit Mollie when she appears. She also likes to eat your hamburgers. So when the hamburger appears, take it back from Mollie by clicking on it and you will get extra points.';
     showInfo.style.color = 'blue';
+    showInfo.style.backgroundColor = "black";
+    showInfo.style.width = '60%';
     var oldElement = document.getElementById('controls-area');
     oldElement.replaceWith(showInfo);
 
