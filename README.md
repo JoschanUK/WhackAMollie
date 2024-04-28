@@ -1,110 +1,103 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Introduction
+Whack A Mollie is a spin off from the popular arcade game - Whac-A-Mole. Whac-A-Mole was created in 1975 by the amusements manufacturer TOGO in Japan, where it was originally known as Mogura Taiji (モグラ退治, "Mole Buster") or Mogura Tataki (モグラたたき, "Mole Smash").
 
-Welcome Joseph Chan,
+A typical Whac-A-Mole machine consists of a waist-level cabinet with a play area and display screen, and a large, soft mallet. Five to eight holes in the play area top are filled with small, plastic, cartoonish moles, or other characters, which pop up at random. Points are scored by, as the name suggests, whacking each mole as it appears.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+For this version of Whack A Mollie, beside whacking each mole. At random times, a hamburger will appear which require the player to whack it to get extra points. The story of Mollie the mole begins : 
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+Mollie is a very cheeky mole living in the northern part of England. She loves to pop into the house to steal your food. What you need to do is to hit Mollie when she appears. She also likes to eat your hamburgers. So when the hamburger appears, take it back from Mollie by clicking on it and you will get extra points.  
 
-## Gitpod Reminders
+![alt text](<assets/Readme images/Screenshot on all devices.jpg>)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+# Features
 
-`python3 -m http.server`
+In this section, we shows the users what to expect and what features are presented in this game.
 
-A blue button should appear to click: _Make Public_,
+**3 Navigation buttons - Play game, Stop game, Info on game.**
 
-Another blue button should appear to click: _Open Browser_.
+Play game - 
+Stop game - 
+Info on game - 
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+![alt text](<assets/Readme images/Navigation_Laptops.jpg>)
+![alt text](<assets/Readme images/Navigation_Small_screens.jpg>)
 
-A blue button should appear to click: _Make Public_,
+**Game Area**
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+![alt text](<assets/Readme images/Dog Sign up.jpg>)
 
-To log into the Heroku toolbelt CLI:
+**Level and score**
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+![alt text](<assets/Readme images/Links.jpg>)
 
-------
 
-## Release History
+# Features left to implement
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+- To add extra moles for user to hit when they progress on the higher levels.
+- A timer to end the game when the user take too long to hit the mole.
 
-**September 20 2023:** Update Python version to 3.9.17.
+# Testing
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+**Validator Testing**
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+  | Link| Result |
+  | --- | ---|
+  |https://joschanuk.github.io/love-dogs/index.html | No Error |
+  |https://joschanuk.github.io/love-dogs/gallery.html | No Error |
+  |https://joschanuk.github.io/love-dogs/caring.html | No Error |
+  |https://joschanuk.github.io/love-dogs/contact.html | No Error |
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- Javascript
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+- Web Page Testing
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+    | Test | Expectation | How to carry out | Result |
+    | ---  | --- | ---| ---|
+    | Nav bar | To be able to bring you to another webpage | By clicking on the text|Pass|
+    | Dog walk sign up | User details are captured | Enter sign up details | Pass|
+    | Social Media | Re direct to the website log in page | Click on the icons | Pass|
+    | Audio| The audio is played | Clicking on the play button | Pass|
+    | Video | The video is played| Clicking on the Play button| Pass|
+    | Map | The Map will be enlarged | Clicking on the map | Pass|
+    | Resizing on different devices | The layout is correct | Using the inspect code | Pass|
+    | Deploy Website | Website is working and usable | Deploy from Github| Pass|
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+# Deployment
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+The site was deployed to GitHub pages. The steps to deploy are as follows:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+1. On GitHub, navigate to your site's repository.
+2. Under your repository name, click  Settings. If you cannot see the "Settings" tab, select the  dropdown menu, then click Settings.
+3. Screenshot of a repository header showing the tabs. The "Settings" tab is highlighted by a dark orange outline.
+4. In the "Code and automation" section of the sidebar, click  Pages.
+5. Under "Build and deployment", under "Source", select Deploy from a branch.
+6. Under "Build and deployment", use the branch dropdown menu and select a publishing source.
+Screenshot of Pages settings in a GitHub repository. A menu to select a branch for a publishing source, labeled "None," is outlined in dark orange.
+7. Click Save.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+The live link can be found here - https://joschanuk.github.io/love-dogs/
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+# Credits
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+**Content and Media**
 
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+- The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+- Source codes from Love Math to build my very own computer game - Whack A Mollie.
+- https://en.wikipedia.org/wiki/Whac-A-Mole.
+- Downloaded a mp3 and mp4 (music and video) from Youtube.
+- [W3school](https://www.w3schools.com) - For guiding me how to write the codes.
+- Text in the caring page is taken from website [Animal Foundation.com](https://animalfoundation.com/whats-going-on/blog/basic-necessities-proper-pet-care).
+- All walker's pictures are taken from my personal photo album.
+- Instruction to deploy is taken from [Github](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+- Putting google maps using iframe [stackoverflow](https://stackoverflow.com/questions/23737427/how-to-put-two-iframes-side-by-side).
+- Pure CSS Hamburger [fold-out menu](https://codepen.io/erikterwan/pen/EVzeRP). 
