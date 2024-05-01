@@ -7,13 +7,14 @@ document.addEventListener("DOMContentLoaded", function(){
     let button_start = document.getElementById('play');
     let button_end = document.getElementById('end');
     let button_info = document.getElementById('info');
+    
 
     button_start.addEventListener("click", runGame);
     button_end.addEventListener("click", endGame);
     button_info.addEventListener("click", showInfo);
     
     /* For loop to addEventListener to the game-area 12 buttons */
-    for (let i = 1; i <= 12; i++) {
+    for (let i = 0; i <= 12; i++) {
 
         let button = document.getElementById(i);
          button.addEventListener("click", function () {
@@ -31,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function(){
 });
 /* Level 1 will have 5 mole */
 let startMole = 1;
-let totalMole = 5;
+let totalMole = 6;
 let whichButton = 0;
 let totalHamburger = 0;
 let level = 2;
@@ -48,15 +49,20 @@ listOfNumbers = generateNumber(totalHamburger);
 
 function runGame() {
 
-            console.log('startMole' + startMole);
-            if (startMole != 6) {
-                if (listOfNumbers[startMole-1] != 'x'){
+            //console.log('startMole' + startMole);
+            if (startMole != (totalMole+totalHamburger )) {
+                if (listOfNumbers[startMole-1] != '0'){
                     let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
                     selectedbutton.style.backgroundColor = "red";
                     startMole+= 1;
                 } else {
                     /*Display hamburger*/
                     alert('Display Hamburger !!!')
+                    let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
+                    selectedbutton.style.backgroundColor = "red";
+                    selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
+                    startMole+= 1;
+                    
                 }
             }
             else {
@@ -102,11 +108,11 @@ function generateNumber(totalHamburger) {
     for (i = 0; i<noOfArrays; i++){
 
         if (i == positionHamburger[0]) {
-            numbers[i] = 'x';
+            numbers[i] = '0';
         } else if (i == positionHamburger[1]) {
-            numbers[i] = 'x';
+            numbers[i] = '0';
         } else if (i == positionHamburger[2]) {
-            numbers[i] = 'x';
+            numbers[i] = '0';
         } else {
             numbers[i] = Math.floor(Math.random() * 12) + 1;    
         }
@@ -161,11 +167,11 @@ function correct_click(number, user_clickbutton) {
         score('10');
         whichButton+= 1;
         runGame();
-    } else if (number == 'x') {
+    } else if (number == '0') {
         let selectedbutton = document.getElementById(user_clickbutton);
         selectedbutton.style.backgroundColor = "white";
         selectedbutton.style.color= "grey";
-        //console.log('Right click');
+        console.log('Right click');
         score('20');
         whichButton+= 1;
         runGame();
