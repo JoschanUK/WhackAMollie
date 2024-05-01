@@ -168,9 +168,12 @@ function correct_click(number, user_clickbutton) {
         runGame();
     } else if (number == '0') {
         let selectedbutton = document.getElementById(user_clickbutton);
-        selectedbutton.style.backgroundColor = "white";
-        selectedbutton.style.color= "grey";
-        selectedbutton.innerHTML =" ";
+        selectedbutton.style.backgroundColor = "red";
+        selectedbutton.style.color= "red";
+        
+        // selectedbutton.style.display= "none";
+        // selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
+        // selectedbutton.innerHTML = '<img src="assets/images/heading_logo.png" />';
         console.log('Right click');
         score('20');
         whichButton+= 1;
@@ -178,9 +181,10 @@ function correct_click(number, user_clickbutton) {
     }
     
     else {
-       // console.log('Wrong click');
+        let music = new Audio('assets/music/game_over.mp3');
         document.getElementById("message").innerHTML = ('Game Over'); 
         alert('Game Over -  Click red button to end game or blue button to restart the game ...');
+        music.play();
         throw ('Game Over');  
         
 
