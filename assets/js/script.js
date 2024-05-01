@@ -58,7 +58,7 @@ function runGame() {
                 } else {
                     /*Display hamburger*/
                     let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
-                    selectedbutton.style.backgroundColor = "red";
+                    selectedbutton.style.backgroundColor = "black";
                     selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
                     startMole+= 1;
                     

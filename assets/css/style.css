@@ -106,13 +106,14 @@ body {
     position: absolute; 
     top: 250px; 
     left: 600px; 
-    width: 100px;
-    height: 100px;
+    width: 105px;
+    height: 110px;
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.2px;
     color: white;
     background-image: url("../images/bwhamburger.png");  
+    background-color: white;
     
 }
 .btn {
