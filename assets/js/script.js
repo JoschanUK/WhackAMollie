@@ -33,16 +33,16 @@ document.addEventListener("DOMContentLoaded", function(){
 let startMole = 1;
 let totalMole = 5;
 let whichButton = 0;
+let totalHamburger = 0;
 let level = 2;
 let listOfNumbers = [];
 
+/* Generate either 0, 1 or 2 hamburgers */
+totalHamburger = Math.floor(Math.random() * 3);   
+console.log ('total hamburger : ' + totalHamburger);
  /* Generate 5 random numbers and place in array */
-   
- listOfNumbers = generateNumber();
-    for (test=0; test<5; test++){
-        console.log('list of numbers ' + test + " - " + listOfNumbers[test]);
-    }
-
+listOfNumbers = generateNumber(totalHamburger);
+    
 /* How the game is run */
 /* Level 1 will start with 5 mole with 1 hamburger*/
 
@@ -50,9 +50,14 @@ function runGame() {
 
             console.log('startMole' + startMole);
             if (startMole != 6) {
-                let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
-                selectedbutton.style.backgroundColor = "red";
-                startMole+= 1;
+                if (listOfNumbers[startMole-1] != 'x'){
+                    let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
+                    selectedbutton.style.backgroundColor = "red";
+                    startMole+= 1;
+                } else {
+                    /*Display hamburger*/
+                    alert('Display Hamburger !!!')
+                }
             }
             else {
                 increaseLevel();
@@ -67,18 +72,45 @@ function increaseLevel(){
     startMole = 1;
     whichButton = 1;
     listOfNumbers = [];
-    listOfNumbers = generateNumber();
+    let totalHamburger = 0;
+
+    /* Generate either 0, 1 or 2 hamburgers */
+    totalHamburger = Math.floor(Math.random() * 3);   
+    listOfNumbers = generateNumber(totalHamburger);
     alert('Level ' + level + ' - ' + 'Ready , Steady ... Go!'  );
     level+=1;
     runGame();
 }
 
 
-function generateNumber() {
+function generateNumber(totalHamburger) {
 
     let numbers = [];
-    for (i = 0; i<5; i++){
-        numbers[i] = Math.floor(Math.random() * 12) + 1;    
+    let positionHamburger = [];
+    let noOfArrays = 0;
+    
+
+    /* To randomly find the position where the hamburger should be place in an array */
+    for (x = 0; x < totalHamburger; x++) {
+        positionHamburger[x] = Math.floor(Math.random() * 6);
+    }
+   
+    console.log ('array of hamburger : ' + positionHamburger);
+
+    noOfArrays = totalHamburger + 5;
+    console.log('noOfArrays : ' + noOfArrays);
+    for (i = 0; i<noOfArrays; i++){
+
+        if (i == positionHamburger[0]) {
+            numbers[i] = 'x';
+        } else if (i == positionHamburger[1]) {
+            numbers[i] = 'x';
+        } else if (i == positionHamburger[2]) {
+            numbers[i] = 'x';
+        } else {
+            numbers[i] = Math.floor(Math.random() * 12) + 1;    
+        }
+          
     }
     console.log('generateNumber : ' + numbers);
     return numbers;
@@ -129,12 +161,20 @@ function correct_click(number, user_clickbutton) {
         score('10');
         whichButton+= 1;
         runGame();
-        
-
-    } else {
+    } else if (number == 'x') {
+        let selectedbutton = document.getElementById(user_clickbutton);
+        selectedbutton.style.backgroundColor = "white";
+        selectedbutton.style.color= "grey";
+        //console.log('Right click');
+        score('20');
+        whichButton+= 1;
+        runGame();
+    }
+    
+    else {
        // console.log('Wrong click');
         document.getElementById("message").innerHTML = ('Game Over'); 
-        alert('Game Over -  Click red button to restart ...');
+        alert('Game Over -  Click red button to end game or blue button to restart the game ...');
         throw ('Game Over');  
         
 
