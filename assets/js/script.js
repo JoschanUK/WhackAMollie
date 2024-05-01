@@ -57,7 +57,6 @@ function runGame() {
                     startMole+= 1;
                 } else {
                     /*Display hamburger*/
-                    alert('Display Hamburger !!!')
                     let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
                     selectedbutton.style.backgroundColor = "red";
                     selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
@@ -171,6 +170,7 @@ function correct_click(number, user_clickbutton) {
         let selectedbutton = document.getElementById(user_clickbutton);
         selectedbutton.style.backgroundColor = "white";
         selectedbutton.style.color= "grey";
+        selectedbutton.innerHTML =" ";
         console.log('Right click');
         score('20');
         whichButton+= 1;
