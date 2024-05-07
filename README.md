@@ -7,7 +7,7 @@ For this version of Whack A Mollie, beside whacking each mole. At random times, 
 
 Mollie is a very cheeky mole living in the northern part of England. She loves to pop into the house to steal your food. What you need to do is to hit Mollie when she appears. She also likes to eat your hamburgers. So when the hamburger appears, take it back from Mollie by clicking on it and you will get extra points.  
 
-![alt text](<assets/Readme images/Screenshot on all devices.jpg>)
+![alt text](assets/readme_images/allscreen.jpg)
 
 # Features
 
@@ -22,15 +22,28 @@ Info on game -
 ![alt text](<assets/Readme images/Navigation_Laptops.jpg>)
 ![alt text](<assets/Readme images/Navigation_Small_screens.jpg>)
 
-**Game Area**
+**Game Area - Main Screen**
+
+![alt text](assets/readme_images/Mainscreen.jpg)
+
+**Information**
+
+![alt text](assets/readme_images/Information.jpg)
+
+**Start Game - Hitting the mole**
+
+![alt text](assets/readme_images/startgame.jpg)
+
+**Hitting the Hamburger**
+
+![alt text](assets/readme_images/Hamburger.jpg)
+
+**Messages prompt**
+
+![alt text](assets/readme_images/Level.jpg)
+![alt text](assets/readme_images/gameover.jpg)
 
 
-![alt text](<assets/Readme images/Dog Sign up.jpg>)
-
-**Level and score**
-
-
-![alt text](<assets/Readme images/Links.jpg>)
 
 
 # Features left to implement
