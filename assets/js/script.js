@@ -149,16 +149,7 @@ function showInfo(event) {
     showInfo.style.width = '60%';
     var oldElement = document.getElementById('controls-area');
     oldElement.replaceWith(showInfo);
-
-    /*Disable the play button and get info buttons */
-    var button_info = document.getElementById('info');
-    var button_play = document.getElementById('play');
-
-    // Then, disable the button
-    button_info.disabled = true;
-    button_play.disabled = true;
-    button_info.style.backgroundColor = "white";
-    button_play.style.backgroundColor = "white";
+    disable_button();
 }
 
 function correct_click(number, user_clickbutton) {
@@ -188,7 +179,8 @@ function correct_click(number, user_clickbutton) {
         } else {
         let music = new Audio('assets/music/game_over.mp3');
         document.getElementById("message").innerHTML = ('Game Over'); 
-        alert('Game Over -  Click red button to end game or blue button to restart the game ...');
+        disable_button();
+        alert('Game Over -  Click red button to end game...');
         //music.play();
         throw ('Game Over');  
         
@@ -204,4 +196,17 @@ function score(add_score){
     const total_score = Number(now_score.textContent) + Number(add_score);
     document.getElementById("result").innerHTML = (total_score);
   //  console.log('total score:' + total_score);
+}
+
+function disable_button() {
+
+    /*Disable the play button and get info buttons */
+    var button_info = document.getElementById('info');
+    var button_play = document.getElementById('play');
+
+    // Then, disable the button
+    button_info.disabled = true;
+    button_play.disabled = true;
+    button_info.style.backgroundColor = "white";
+    button_play.style.backgroundColor = "white";
 }
