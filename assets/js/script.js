@@ -162,29 +162,26 @@ function correct_click(number, user_clickbutton) {
         let selectedbutton = document.getElementById(user_clickbutton);
         selectedbutton.style.backgroundColor = "white";
         selectedbutton.style.color= "grey";
-        //console.log('Right click');
+        console.log('number : ' + number);
         score('10');
         whichButton+= 1;
         runGame();
-    } else if (number == '0') {
-        let selectedbutton = document.getElementById(user_clickbutton);
-        selectedbutton.style.backgroundColor = "red";
-        selectedbutton.style.color= "red";
-        
-        // selectedbutton.style.display= "none";
-        // selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
-        // selectedbutton.innerHTML = '<img src="assets/images/heading_logo.png" />';
-        console.log('Right click');
-        score('20');
-        whichButton+= 1;
-        runGame();
-    }
-    
-    else {
+
+        if (number == '0'){
+                
+                 selectedbutton.innerHTML = '';
+             
+               // document.getElementById("btn_coloured_hamburger").style.display = "none";
+                console.log('Right click2');
+                score('20');
+                
+            }
+          
+        } else {
         let music = new Audio('assets/music/game_over.mp3');
         document.getElementById("message").innerHTML = ('Game Over'); 
         alert('Game Over -  Click red button to end game or blue button to restart the game ...');
-        music.play();
+        //music.play();
         throw ('Game Over');  
         
 

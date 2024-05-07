@@ -111,10 +111,23 @@ body {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-    color: white;
-    background-image: url("../images/bwhamburger.png");  
+   color: white;
+ /*  background-image: url("../images/bwhamburger.png");  */
     background-color: white;
     
+}
+.btn_coloured_hamburger {
+    top: 250px; 
+    left: 600px; 
+    width: 105px;
+    height: 110px;
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: white;
+    background-image: url("../images/hamburger.png");  
+    background-color: white;
+    display: none;
 }
 .btn {
     width: 220px;
