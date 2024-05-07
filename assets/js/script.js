@@ -53,12 +53,13 @@ function runGame() {
             if (startMole != (totalMole+totalHamburger )) {
                 if (listOfNumbers[startMole-1] != '0'){
                     let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
-                    selectedbutton.style.backgroundColor = "red";
+                    /*selectedbutton.style.backgroundColor = "red";*/
+                    selectedbutton.innerHTML = '<img src="assets/images/heading_logo.png" />';
                     startMole+= 1;
                 } else {
                     /*Display hamburger*/
                     let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
-                    selectedbutton.style.backgroundColor = "black";
+                    selectedbutton.style.backgroundColor = "white";
                     selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
                     startMole+= 1;
                     
@@ -160,9 +161,10 @@ function correct_click(number, user_clickbutton) {
     if (number == user_clickbutton){
         
         let selectedbutton = document.getElementById(user_clickbutton);
-        selectedbutton.style.backgroundColor = "white";
-        selectedbutton.style.color= "grey";
-        console.log('number : ' + number);
+        /*selectedbutton.style.backgroundColor = "white";
+        selectedbutton.style.color= "grey";*/
+        selectedbutton.innerHTML = '';
+       /* console.log('number : ' + number); */
         score('10');
         whichButton+= 1;
         runGame();
@@ -172,7 +174,7 @@ function correct_click(number, user_clickbutton) {
                  selectedbutton.innerHTML = '';
              
                // document.getElementById("btn_coloured_hamburger").style.display = "none";
-                console.log('Right click2');
+                //console.log('Right click2');
                 score('10');
                 
             }
@@ -197,4 +199,3 @@ function score(add_score){
     document.getElementById("result").innerHTML = (total_score);
   //  console.log('total score:' + total_score);
 }
-
