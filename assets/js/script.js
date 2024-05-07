@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function(){
          button.addEventListener("click", function () {
 
             /* Display the whack image over the button */
-           // button.innerHTML = '<img src="assets/images/whack.png" />';
+            /*button.innerHTML = '<img src="assets/images/whack.png" />';*/
             
             /* After a user click on the button, check click against array */
             correct_click(listOfNumbers[whichButton-1], i); 
