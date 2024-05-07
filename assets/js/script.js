@@ -36,21 +36,24 @@ let totalMole = 6;
 let whichButton = 0;
 let totalHamburger = 0;
 let level = 2;
+let total_mole_hamburger = 0;
 let listOfNumbers = [];
 
 /* Generate either 0, 1 or 2 hamburgers */
 totalHamburger = Math.floor(Math.random() * 3);   
 console.log ('total hamburger : ' + totalHamburger);
+console.log ('total mole : ' + totalMole);
  /* Generate 5 random numbers and place in array */
 listOfNumbers = generateNumber(totalHamburger);
-    
+total_mole_hamburger = totalMole + totalHamburger;
 /* How the game is run */
 /* Level 1 will start with 5 mole with 1 hamburger*/
 
 function runGame() {
 
-            //console.log('startMole' + startMole);
-            if (startMole != (totalMole+totalHamburger )) {
+            console.log('total : ' + (total_mole_hamburger));
+            console.log(startMole)
+            if (startMole != (total_mole_hamburger)) {
                 if (listOfNumbers[startMole-1] != '0'){
                     let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
                     /*selectedbutton.style.backgroundColor = "red";*/
@@ -79,12 +82,15 @@ function increaseLevel(){
     whichButton = 1;
     listOfNumbers = [];
     let totalHamburger = 0;
+    total_mole_hamburger = 0;
 
     /* Generate either 0, 1 or 2 hamburgers */
     totalHamburger = Math.floor(Math.random() * 3);   
     listOfNumbers = generateNumber(totalHamburger);
     alert('Level ' + level + ' - ' + 'Ready , Steady ... Go!'  );
+    total_mole_hamburger = totalMole + totalHamburger;
     level+=1;
+    
     runGame();
 }
 
@@ -104,7 +110,7 @@ function generateNumber(totalHamburger) {
     console.log ('array of hamburger : ' + positionHamburger);
 
     noOfArrays = totalHamburger + 5;
-    console.log('noOfArrays : ' + noOfArrays);
+   /* console.log('noOfArrays : ' + noOfArrays);*/
     for (i = 0; i<noOfArrays; i++){
 
         if (i == positionHamburger[0]) {
@@ -166,9 +172,7 @@ function correct_click(number, user_clickbutton) {
         selectedbutton.innerHTML = '';
        /* console.log('number : ' + number); */
         score('10');
-        whichButton+= 1;
-        runGame();
-
+        
         if (number == '0'){
                 
                  selectedbutton.innerHTML = '';
@@ -177,7 +181,9 @@ function correct_click(number, user_clickbutton) {
                 //console.log('Right click2');
                 score('10');
                 
-            }
+        }
+        whichButton+= 1;
+        runGame();
           
         } else {
         let music = new Audio('assets/music/game_over.mp3');
