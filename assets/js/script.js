@@ -173,7 +173,7 @@ function correct_click(number, user_clickbutton) {
              
                // document.getElementById("btn_coloured_hamburger").style.display = "none";
                 console.log('Right click2');
-                score('20');
+                score('10');
                 
             }
           
