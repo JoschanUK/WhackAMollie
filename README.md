@@ -15,30 +15,41 @@ In this section, we shows the users what to expect and what features are present
 
 **3 Navigation buttons - Play game, Stop game, Info on game.**
 
-Play game - 
-Stop game - 
-Info on game - 
+Play game - User has to click this red button to start a game.
 
-![alt text](<assets/Readme images/Navigation_Laptops.jpg>)
-![alt text](<assets/Readme images/Navigation_Small_screens.jpg>)
+Stop game - User will click this button when he wants to stop the game or to close the information tab.
+
+Info on game - This is an introduction how to play the game. 
+
+
 
 **Game Area - Main Screen**
+
+User is greeted on this main screen when he access the web page. User has 3 options here, that is to play game, stop game or read the information by clicking on the Info (green) button.
 
 ![alt text](assets/readme_images/Mainscreen.jpg)
 
 **Information**
 
+User clicking on the Info(Green) button will be able to read the introduction of this game.
+
 ![alt text](assets/readme_images/Information.jpg)
 
 **Start Game - Hitting the mole**
+
+The rule of the game is to whack the mole when the mole appears. 
 
 ![alt text](assets/readme_images/startgame.jpg)
 
 **Hitting the Hamburger**
 
+As a bonus, hamburger appears and user will whack it to get extra points.
+
 ![alt text](assets/readme_images/Hamburger.jpg)
 
 **Messages prompt**
+
+These are the messages which are prompt when user is increased in level or when the game is over.
 
 ![alt text](assets/readme_images/Level.jpg)
 ![alt text](assets/readme_images/gameover.jpg)
@@ -60,26 +71,23 @@ Info on game -
 
   | Link| Result |
   | --- | ---|
-  |https://joschanuk.github.io/love-dogs/index.html | No Error |
-  |https://joschanuk.github.io/love-dogs/gallery.html | No Error |
-  |https://joschanuk.github.io/love-dogs/caring.html | No Error |
-  |https://joschanuk.github.io/love-dogs/contact.html | No Error |
+  |https://joschanuk.github.io/WhackAMollie/ | No Error |
+  
 
 - CSS
-  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/)
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/).
 
 - Javascript
+  - No erros were found when passing through the offical [JShint](https://jshint.com/).
 
 - Web Page Testing
 
     | Test | Expectation | How to carry out | Result |
     | ---  | --- | ---| ---|
-    | Nav bar | To be able to bring you to another webpage | By clicking on the text|Pass|
-    | Dog walk sign up | User details are captured | Enter sign up details | Pass|
-    | Social Media | Re direct to the website log in page | Click on the icons | Pass|
+    | Game Contols button | To either play game, end game or get info on this game | By clicking on the red, blue and green buttons|Pass|
+    | Whacking the mole | Mole to appear on the game area and to be able to whack the mole | By clicking | Pass|
+    | Whacking the hamburger to get extra points | Hamburger to appear and to be able to whack the hamburger | By clicking on the hamburger | Pass|
     | Audio| The audio is played | Clicking on the play button | Pass|
-    | Video | The video is played| Clicking on the Play button| Pass|
-    | Map | The Map will be enlarged | Clicking on the map | Pass|
     | Resizing on different devices | The layout is correct | Using the inspect code | Pass|
     | Deploy Website | Website is working and usable | Deploy from Github| Pass|
 
@@ -98,7 +106,7 @@ Screenshot of Pages settings in a GitHub repository. A menu to select a branch f
 
 Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
 
-The live link can be found here - https://joschanuk.github.io/love-dogs/
+The live link can be found here - https://joschanuk.github.io/WhackAMollie/
 
 # Credits
 
@@ -106,11 +114,8 @@ The live link can be found here - https://joschanuk.github.io/love-dogs/
 
 - The icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
 - Source codes from Love Math to build my very own computer game - Whack A Mollie.
-- https://en.wikipedia.org/wiki/Whac-A-Mole.
-- Downloaded a mp3 and mp4 (music and video) from Youtube.
+- [Wikipedia](https://en.wikipedia.org/wiki/Whac-A-Mole) on what is Whack a mole game.
+- [Picabay](https://pixabay.com/sound-effects/search/game/) and [Mixkit](https://mixkit.co/) for the music and sound for this game.
 - [W3school](https://www.w3schools.com) - For guiding me how to write the codes.
-- Text in the caring page is taken from website [Animal Foundation.com](https://animalfoundation.com/whats-going-on/blog/basic-necessities-proper-pet-care).
-- All walker's pictures are taken from my personal photo album.
+- Icons used in this game is provided by [Flaticon](https://www.flaticon.com/).
 - Instruction to deploy is taken from [Github](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
-- Putting google maps using iframe [stackoverflow](https://stackoverflow.com/questions/23737427/how-to-put-two-iframes-side-by-side).
-- Pure CSS Hamburger [fold-out menu](https://codepen.io/erikterwan/pen/EVzeRP). 
