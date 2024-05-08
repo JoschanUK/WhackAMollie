@@ -49,13 +49,12 @@ As a bonus, hamburger appears and user will whack it to get extra points.
 
 **Messages prompt**
 
-These are the messages which are prompt when user is increased in level or when the game is over.
+There are two messages which will be prompted to the user. 
+1. Increase in level.
+2. Game over.
 
 ![alt text](assets/readme_images/Level.jpg)
 ![alt text](assets/readme_images/gameover.jpg)
-
-
-
 
 # Features left to implement
 
@@ -67,7 +66,7 @@ These are the messages which are prompt when user is increased in level or when 
 **Validator Testing**
 
 - HTML
-  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org).
 
   | Link| Result |
   | --- | ---|
