@@ -1,4 +1,4 @@
-/* Font used */
+/* Style and Font used */
 .jersey-10-regular {
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
@@ -8,7 +8,6 @@
 h2{
     font-size: 2.5rem;
 }
-/* --------- Global style */
 
 body {
     background-color: white;
@@ -17,8 +16,6 @@ body {
     color: #445361;
     text-align: left;
 }
-
-/* --------- Heading */
 
 .heading {
     text-align: center;
@@ -30,12 +27,13 @@ body {
     padding-right: 5px;
 }
 
-/* --------- Game layout */
+/* Game layout */
 
 .background_image{
     max-width: 65%;
     max-height: 50%;
 }
+
 .game-area {
     background-image: url("../images/background.jpg");
     background-size: 100% 100%;
@@ -56,7 +54,6 @@ body {
     /*margin: 30px auto;*/
     margin-left: 200px;
     color: whitesmoke;
-   
 }
 
 .game_controls{
@@ -67,39 +64,9 @@ body {
     width: 80%;
     /*margin: 30px auto;*/
     margin-left: 10px;
-    
-}
-/*
-#score {
-    color: green;
-    font-weight: bold;
 }
 
-#incorrect {
-    color: red;
-    font-weight: bold;
-}
-
-.answer-message {
-    display: none;
-    font-size: 1rem;
-}
-
-#answer-box {
-    border: none;
-    color: #445361;
-    display: inline-block;
-    height: 40px;
-    width: 80px;
-    font-size: 1.2rem;
-}
-
-.scores {
-    display: inline-block;
-    padding: 25px;
-}
-*/
-/* --------- Buttons */
+/* Buttons */
 .btn_hamburger{
     position:absolute; 
     top: 40%; 
@@ -109,25 +76,10 @@ body {
     font-family: "Raleway", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1.2px;
-   color: white;
- /*  background-image: url("../images/bwhamburger.png");  */
-    background-color: white;
-    
-}
-/*
-.btn_coloured_hamburger {
-    top: 250px; 
-    left: 600px; 
-    width: 105px;
-    height: 110px;
-    font-family: "Raleway", sans-serif;
-    text-transform: uppercase;
-    letter-spacing: 1.2px;
     color: white;
-    background-image: url("../images/hamburger.png");  
     background-color: white;
-    display: none;
-}*/
+}
+
 .btn {
     width: 220px;
     height: 60px;
@@ -149,19 +101,16 @@ body {
     width: 100px;
     height: 100px;
     font-size: 3.2rem;
-  /*  margin: 0 30px;*/
     transition: all 0.5s;
 }
 
 .btn--big--control {
     padding-top: 5px;
-    /*border-radius: 50%;*/
     background-color: white;
     border: 7px solid;
     width: 120px;
     height: 80px;
     font-size: 3.2rem;
-  /*  margin: 0 30px;*/
     transition: all 0.5s;
 }
 
@@ -209,7 +158,35 @@ body {
     color: white;
 }
 
-/* --------- Media queries */
+
+/* Tooltip container */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+  /* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    font-size: small;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+/* Media queries */
 
 @media (max-width: 425px) {
     
@@ -237,16 +214,15 @@ body {
         max-width: 850px;
         margin-left: auto;
         margin-right: auto;
-        padding: 1%;
-        
+        padding: 1%;  
     }
+
     .display_area {
         width: 20%;
         font-weight: 400;
         /*margin: 30px auto;*/
         margin-left: 1px;
-        color: whitesmoke;
-       
+        color: whitesmoke;  
     }
     
     .game_controls{
@@ -259,8 +235,8 @@ body {
         margin-left: 10px;
         margin-top: 50px;
         font-size: 1rem;
-        
     }
+
     .btn--big {
         padding-top: 5px;
         border-radius: 50%;
@@ -269,19 +245,16 @@ body {
         width: 50px;
         height: 50px;
         font-size: 1rem;
-      /*  margin: 0 30px;*/
         transition: all 0.5s;
     }
 
     .btn--big--control {
         padding-top: 5px;
-        /*border-radius: 50%;*/
         background-color: white;
         border: 5px solid;
         width: 50px;
         height: 50px;
         font-size: 1rem;
-      /*  margin: 0 30px;*/
         transition: all 0.5s;
     }
     
@@ -338,12 +311,9 @@ body {
         font-family: "Raleway", sans-serif;
         text-transform: uppercase;
         letter-spacing: 1.2px;
-       color: white;
-     /*  background-image: url("../images/bwhamburger.png");  */
-        background-color: white;
-        
+        color: white;
+        background-color: white; 
     }    
-
 }
 
 @media (max-width: 375px){
@@ -360,6 +330,7 @@ body {
         max-width: 65%;
         max-height: 50%;
     }
+
     .game-area {
         background-image: url("../images/background.jpg");
         background-size: 100% 100%;
@@ -372,15 +343,14 @@ body {
         margin-left: auto;
         margin-right: auto;
         padding: 1%;
-        
     }
+
     .display_area {
         width: 20%;
         font-weight: 400;
         /*margin: 30px auto;*/
         margin-left: 1px;
         color: whitesmoke;
-       
     }
     
     .game_controls{
@@ -402,19 +372,16 @@ body {
         width: 50px;
         height: 50px;
         font-size: 1rem;
-      /*  margin: 0 30px;*/
         transition: all 0.5s;
     }
 
     .btn--big--control {
         padding-top: 5px;
-        /*border-radius: 50%;*/
         background-color: white;
         border: 5px solid;
         width: 50px;
         height: 50px;
         font-size: 1rem;
-      /*  margin: 0 30px;*/
         transition: all 0.5s;
     }
     
@@ -471,42 +438,10 @@ body {
         font-family: "Raleway", sans-serif;
         text-transform: uppercase;
         letter-spacing: 1.2px;
-       color: white;
-     /*  background-image: url("../images/bwhamburger.png");  */
+        color: white;
         background-color: white;
-        
     }    
-
 }
-
-
-/* Tooltip container */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: lightgrey;
-    color: black;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    font-size: small;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }
-
 
 @media (max-width: 320px){
     
@@ -522,6 +457,7 @@ body {
         max-width: 65%;
         max-height: 50%;
     }
+
     .game-area {
         background-image: url("../images/background.jpg");
         background-size: 100% 100%;
@@ -539,7 +475,6 @@ body {
     .display_area {
         width: 20%;
         font-weight: 400;
-        /*margin: 30px auto;*/
         margin-left: 1px;
         color: whitesmoke;
        
@@ -551,11 +486,11 @@ body {
     
     #controls-area {
         width: 60%;
-        /*margin: 30px auto;*/
         margin-left: 10px;
         margin-top: 50px;
         
     }
+
     .btn--big {
         padding-top: 5px;
         border-radius: 50%;
@@ -564,19 +499,16 @@ body {
         width: 50px;
         height: 50px;
         font-size: 1rem;
-      /*  margin: 0 30px;*/
         transition: all 0.5s;
     }
 
     .btn--big--control {
         padding-top: 5px;
-        /*border-radius: 50%;*/
         background-color: white;
         border: 5px solid;
         width: 50px;
         height: 50px;
         font-size: 1rem;
-      /*  margin: 0 30px;*/
         transition: all 0.5s;
     }
     
@@ -633,38 +565,7 @@ body {
         font-family: "Raleway", sans-serif;
         text-transform: uppercase;
         letter-spacing: 1.2px;
-       color: white;
-     /*  background-image: url("../images/bwhamburger.png");  */
+        color: white;
         background-color: white;
-        
     }    
-
 }
-
-
-/* Tooltip container */
-.tooltip {
-    position: relative;
-    display: inline-block;
-}
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
-    visibility: hidden;
-    width: 120px;
-    background-color: lightgrey;
-    color: black;
-    text-align: center;
-    padding: 5px 0;
-    border-radius: 6px;
-    font-size: small;
-   
-    /* Position the tooltip text - see examples below! */
-    position: absolute;
-    z-index: 1;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
-    visibility: visible;
-  }

@@ -17,19 +17,17 @@ document.addEventListener("DOMContentLoaded", function(){
     for (let i = 0; i <= 12; i++) {
 
         let button = document.getElementById(i);
-         button.addEventListener("click", function () {
-
-            /* Display the whack image over the button */
-            /*button.innerHTML = '<img src="assets/images/whack.png" />';*/
-            
-            /* After a user click on the button, check click against array */
-            correct_click(listOfNumbers[whichButton-1], i); 
+        button.addEventListener("click", function () {
+       
+        /* After a user click on the button, check click against array */
+        correct_click(listOfNumbers[whichButton-1], i); 
          });
          
      }
      whichButton+= 1;
 
 });
+
 /* Level 1 will have 5 mole */
 let startMole = 1;
 let totalMole = 6;
@@ -43,40 +41,40 @@ let listOfNumbers = [];
 totalHamburger = Math.floor(Math.random() * 3);   
 console.log ('total hamburger : ' + totalHamburger);
 console.log ('total mole : ' + totalMole);
+
  /* Generate 5 random numbers and place in array */
 listOfNumbers = generateNumber(totalHamburger);
 total_mole_hamburger = totalMole + totalHamburger;
+
 /* How the game is run */
 /* Level 1 will start with 5 mole with 1 hamburger*/
 
 function runGame() {
 
-            console.log('total : ' + (total_mole_hamburger));
-            console.log(startMole)
-            if (startMole != (total_mole_hamburger)) {
-                if (listOfNumbers[startMole-1] != '0'){
-                    let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
-                    /*selectedbutton.style.backgroundColor = "red";*/
-                    selectedbutton.innerHTML = '<img src="assets/images/heading_logo.png" />';
-                    startMole+= 1;
-                } else {
-                    /*Display hamburger*/
-                    let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
-                    selectedbutton.style.backgroundColor = "white";
-                    selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
-                    startMole+= 1;
+    console.log('total : ' + (total_mole_hamburger));
+    if (startMole != (total_mole_hamburger)) {
+        if (listOfNumbers[startMole-1] != '0'){
+            let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
+            selectedbutton.innerHTML = '<img src="assets/images/heading_logo.png" />';
+            startMole+= 1;
+        } else {
+                /*Display hamburger*/
+                let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
+                selectedbutton.style.backgroundColor = "white";
+                selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
+                startMole+= 1;
                     
-                }
             }
-            else {
-                increaseLevel();
-            }
+        }
+        else {
+            increaseLevel();
+        }
         
 }
 
 function increaseLevel(){
+   
     document.getElementById("level").innerHTML = ('Level ' + level);
-    
     /* Reset global variables */
     startMole = 1;
     whichButton = 1;
@@ -101,14 +99,12 @@ function generateNumber(totalHamburger) {
     let positionHamburger = [];
     let noOfArrays = 0;
     
-
     /* To randomly find the position where the hamburger should be place in an array */
     for (x = 0; x < totalHamburger; x++) {
         positionHamburger[x] = Math.floor(Math.random() * 6);
     }
    
     console.log ('array of hamburger : ' + positionHamburger);
-
     noOfArrays = totalHamburger + 5;
    /* console.log('noOfArrays : ' + noOfArrays);*/
     for (i = 0; i<noOfArrays; i++){
@@ -126,8 +122,6 @@ function generateNumber(totalHamburger) {
     }
     console.log('generateNumber : ' + numbers);
     return numbers;
-    
-
 }
 
 function endGame(event) {
@@ -135,7 +129,6 @@ function endGame(event) {
     console.log ('End Game');
     document.getElementById("message").innerHTML = ('End Game');
     location.reload();
-    
 }
 
 function showInfo(event) {
@@ -158,44 +151,33 @@ function correct_click(number, user_clickbutton) {
     if (number == user_clickbutton){
         
         let selectedbutton = document.getElementById(user_clickbutton);
-        /*selectedbutton.style.backgroundColor = "white";
-        selectedbutton.style.color= "grey";*/
         selectedbutton.innerHTML = '';
-       /* console.log('number : ' + number); */
         score('10');
         
         if (number == '0'){
                 
-                 selectedbutton.innerHTML = '';
-             
-               // document.getElementById("btn_coloured_hamburger").style.display = "none";
-                //console.log('Right click2');
-                score('10');
+            selectedbutton.innerHTML = '';
+            score('10');
                 
         }
         whichButton+= 1;
         runGame();
           
-        } else {
-        let music = new Audio('assets/music/game_over.mp3');
-        document.getElementById("message").innerHTML = ('Game Over'); 
-        disable_button();
-        alert('Game Over -  Click red button to end game...');
-        //music.play();
-        throw ('Game Over');  
-        
-
-                
+    } else {
+            let music = new Audio('assets/music/game_over.mp3');
+            document.getElementById("message").innerHTML = ('Game Over'); 
+            disable_button();
+            alert('Game Over -  Click red button to end game...');
+            //music.play();
+            throw ('Game Over');             
     }
 }
 
 function score(add_score){
     
     const now_score = document.getElementById("result");
-    //console.log (now_score.textContent + add_score);
     const total_score = Number(now_score.textContent) + Number(add_score);
     document.getElementById("result").innerHTML = (total_score);
-  //  console.log('total score:' + total_score);
 }
 
 function disable_button() {
