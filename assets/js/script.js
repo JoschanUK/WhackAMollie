@@ -13,6 +13,10 @@ document.addEventListener("DOMContentLoaded", function(){
     button_end.addEventListener("click", endGame);
     button_info.addEventListener("click", showInfo);
     
+    window.onload = function() {
+        modalBox(); 
+    }
+    
     /* For loop to addEventListener to the game-area 12 buttons */
     for (let i = 0; i <= 12; i++) {
 
@@ -27,6 +31,8 @@ document.addEventListener("DOMContentLoaded", function(){
      whichButton+= 1;
 
 });
+
+
 
 /* Level 1 will have 5 mole */
 let startMole = 1;
@@ -100,14 +106,14 @@ function generateNumber(totalHamburger) {
     let noOfArrays = 0;
     
     /* To randomly find the position where the hamburger should be place in an array */
-    for (x = 0; x < totalHamburger; x++) {
+    for (let x = 0; x < totalHamburger; x++) {
         positionHamburger[x] = Math.floor(Math.random() * 6);
     }
    
     console.log ('array of hamburger : ' + positionHamburger);
     noOfArrays = totalHamburger + 5;
    /* console.log('noOfArrays : ' + noOfArrays);*/
-    for (i = 0; i<noOfArrays; i++){
+    for (let i = 0; i<noOfArrays; i++){
 
         if (i == positionHamburger[0]) {
             numbers[i] = '0';
@@ -191,4 +197,26 @@ function disable_button() {
     button_play.disabled = true;
     button_info.style.backgroundColor = "white";
     button_play.style.backgroundColor = "white";
+}
+
+function modalBox () {
+    console.log ('Modal');
+    // Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+modal.style.display = "block";
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
 }
