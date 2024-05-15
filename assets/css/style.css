@@ -188,6 +188,19 @@ body {
 
 /* Media queries */
 
+@media (max-width: 768px) {
+
+    .btn--big--control {
+        padding-top: 5px;
+        background-color: white;
+        border: 7px solid;
+        width: 90px;
+        height: 80px;
+        font-size: 3.2rem;
+        transition: all 0.5s;
+    }
+}
+
 @media (max-width: 425px) {
     
     img {
@@ -212,7 +225,7 @@ body {
         height: 65vh;
         max-height: 600px;
         max-width: 850px;
-        margin-left: auto;
+        margin-left: 30px;
         margin-right: auto;
         padding: 1%;  
     }
@@ -304,8 +317,8 @@ body {
 
     .btn_hamburger{
         position:absolute; 
-        top: 50%; 
-        left: 60%; 
+        top: 45%; 
+        left: 65%; 
         width: 50px;
         height: 50px;
         font-family: "Raleway", sans-serif;
@@ -315,6 +328,7 @@ body {
         background-color: white; 
     }    
 }
+
 
 @media (max-width: 375px){
     
@@ -340,7 +354,7 @@ body {
         height: 65vh;
         max-height: 600px;
         max-width: 830px;
-        margin-left: auto;
+        margin-left: 30px;
         margin-right: auto;
         padding: 1%;
     }
@@ -467,7 +481,7 @@ body {
         height: 65vh;
         max-height: 600px;
         max-width: 830px;
-        margin-left: auto;
+        margin-left: 30px;
         margin-right: auto;
         padding: 1%;
         
@@ -588,7 +602,7 @@ body {
   /* Modal Content/Box */
   .modal-content {
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
+    margin: 30% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 30%; /* Could be more or less, depending on screen size */
