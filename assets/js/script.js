@@ -181,8 +181,11 @@ function correct_click(number, user_clickbutton) {
             disable_button();
             alert('Game Over -  Click red button to end game...');
             //music.play();
-            throw ('Game Over');             
+            //throw ('Game Over');  
+            
+                       
     }
+    
 }
 
 /* This function is to keep track of scores of the game */
