@@ -21,8 +21,6 @@ Stop game - User will click this button when he wants to stop the game or to clo
 
 Info on game - This is an introduction how to play the game. 
 
-
-
 **Game Area - Main Screen**
 
 User is greeted on this main screen when he access the web page. User has 3 options here, that is to play game, stop game or read the information by clicking on the Info (green) button.
@@ -49,12 +47,17 @@ As a bonus, hamburger appears and user will whack it to get extra points.
 
 **Messages prompt**
 
-There are two messages which will be prompted to the user. 
-1. Increase in level.
-2. Game over.
+There are three messages which will be prompted to the user. 
+1. At the start, a modal box will appear to guide the user how to navigate the game.
+2. Increase in level.
+3. Game over.
 
 ![alt text](assets/readme_images/Level.jpg)
 ![alt text](assets/readme_images/gameover.jpg)
+
+**Music**
+
+There is a audio control found at the top left corner which allow user to turn on the game music and also a game over music will be played when it is game over. 
 
 # Features left to implement
 
@@ -115,6 +118,6 @@ The live link can be found here - https://joschanuk.github.io/WhackAMollie/
 - Source codes from Love Math to build my very own computer game - Whack A Mollie.
 - [Wikipedia](https://en.wikipedia.org/wiki/Whac-A-Mole) on what is Whack a mole game.
 - [Picabay](https://pixabay.com/sound-effects/search/game/) and [Mixkit](https://mixkit.co/) for the music and sound for this game.
-- [W3school](https://www.w3schools.com) - For guiding me how to write the codes.
+- [W3school](https://www.w3schools.com) - For guiding me how to write the codes and the code for the Modal Box.
 - Icons used in this game is provided by [Flaticon](https://www.flaticon.com/).
 - Instruction to deploy is taken from [Github](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).

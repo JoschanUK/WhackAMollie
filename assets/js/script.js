@@ -13,6 +13,7 @@ document.addEventListener("DOMContentLoaded", function(){
     button_end.addEventListener("click", endGame);
     button_info.addEventListener("click", showInfo);
     
+    /* Loading of the Modal Box by calling a function*/
     window.onload = function() {
         modalBox(); 
     }
@@ -78,6 +79,7 @@ function runGame() {
         
 }
 
+/* This function is to increase the level of the game from level 1 onwards */
 function increaseLevel(){
    
     document.getElementById("level").innerHTML = ('Level ' + level);
@@ -98,7 +100,7 @@ function increaseLevel(){
     runGame();
 }
 
-
+/* This is the function to automatically generate the numbers of moles and total hamburger and put it into an array */
 function generateNumber(totalHamburger) {
 
     let numbers = [];
@@ -130,6 +132,7 @@ function generateNumber(totalHamburger) {
     return numbers;
 }
 
+/* This function is when an game over event happens */
 function endGame(event) {
 
     console.log ('End Game');
@@ -137,6 +140,7 @@ function endGame(event) {
     location.reload();
 }
 
+/* This function is when user click the infor control button and will display the game info on screen */
 function showInfo(event) {
 
     console.log ('Show Info');
@@ -151,6 +155,8 @@ function showInfo(event) {
     disable_button();
 }
 
+/* This function is to compare the selected number from the array and what the user has click to determine to proceed
+or is game over */
 function correct_click(number, user_clickbutton) {
 
     console.log('Random No :' + number + ' User :' +user_clickbutton);
@@ -179,6 +185,7 @@ function correct_click(number, user_clickbutton) {
     }
 }
 
+/* This function is to keep track of scores of the game */
 function score(add_score){
     
     const now_score = document.getElementById("result");
@@ -186,6 +193,7 @@ function score(add_score){
     document.getElementById("result").innerHTML = (total_score);
 }
 
+/* This is a function to disable the control buttons */
 function disable_button() {
 
     /*Disable the play button and get info buttons */
@@ -199,24 +207,20 @@ function disable_button() {
     button_play.style.backgroundColor = "white";
 }
 
+/* This function is to display the Modal box at the beginning of the game */
 function modalBox () {
-    console.log ('Modal');
-    // Get the modal
-var modal = document.getElementById("myModal");
+    var modal = document.getElementById("myModal");
+    var span = document.getElementsByClassName("close")[0];
+    modal.style.display = "block";
+    /* When the user clicks on <span> (x), close the modal */
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
 
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-modal.style.display = "block";
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
+    /* When the user clicks anywhere outside of the modal, close it */
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
 }
