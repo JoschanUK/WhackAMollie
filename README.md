@@ -52,12 +52,15 @@ There are three messages which will be prompted to the user.
 2. Increase in level.
 3. Game over.
 
+![alt text](assets/readme_images/ModalBox.jpg)
 ![alt text](assets/readme_images/Level.jpg)
 ![alt text](assets/readme_images/gameover.jpg)
 
 **Music**
 
 There is a audio control found at the top left corner which allow user to turn on the game music and also a game over music will be played when it is game over. 
+
+![alt text](assets/readme_images/audiocontrol.jpg)
 
 # Features left to implement
 
