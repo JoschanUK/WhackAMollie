@@ -58,7 +58,7 @@ There are three messages which will be prompted to the user.
 
 **Music**
 
-There is a audio control found at the top left corner which allow user to turn on the game music and also a game over music will be played when it is game over. 
+There is a audio control found at the top left corner which allow user to turn on the game music.
 
 ![alt text](assets/readme_images/audiocontrol.jpg)
 
@@ -95,6 +95,20 @@ There is a audio control found at the top left corner which allow user to turn o
     | Audio| The audio is played | Clicking on the play button | Pass|
     | Resizing on different devices | The layout is correct | Using the inspect code | Pass|
     | Deploy Website | Website is working and usable | Deploy from Github| Pass|
+
+- Media Query (Issue encounter)
+I noticed that when I use my macbook to align all the buttons and layout of the screen. It is perfect and is at the correct position. But when I moved over the my windows laptop. All the alignments are out. I am documenting this in case when the project is submitted, the alignment are out when the examiner is doing the marking. Attached please see screenshots from macbook.
+
+![alt text](assets/readme_images/320.png)
+
+![alt text](assets/readme_images/375.png)
+
+![alt text](assets/readme_images/425.png)
+
+![alt text](assets/readme_images/768.png)
+
+![alt text](assets/readme_images/1024.png)
+
 
 # Deployment
 

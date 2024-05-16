@@ -2,13 +2,12 @@
 // Get the button elements and add event listeners to them
 
 document.addEventListener("DOMContentLoaded", function(){
+
     /* Creating Event listner for the game control - Start, end and info game */
-    
     let button_start = document.getElementById('play');
     let button_end = document.getElementById('end');
     let button_info = document.getElementById('info');
     
-
     button_start.addEventListener("click", runGame);
     button_end.addEventListener("click", endGame);
     button_info.addEventListener("click", showInfo);
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function(){
     /* Loading of the Modal Box by calling a function*/
     window.onload = function() {
         modalBox(); 
-    }
+    };
     
     /* For loop to addEventListener to the game-area 12 buttons */
     for (let i = 0; i <= 12; i++) {
@@ -27,13 +26,9 @@ document.addEventListener("DOMContentLoaded", function(){
         /* After a user click on the button, check click against array */
         correct_click(listOfNumbers[whichButton-1], i); 
          });
-         
      }
      whichButton+= 1;
-
 });
-
-
 
 /* Level 1 will have 5 mole */
 let startMole = 1;
@@ -46,8 +41,6 @@ let listOfNumbers = [];
 
 /* Generate either 0, 1 or 2 hamburgers */
 totalHamburger = Math.floor(Math.random() * 3);   
-console.log ('total hamburger : ' + totalHamburger);
-console.log ('total mole : ' + totalMole);
 
  /* Generate 5 random numbers and place in array */
 listOfNumbers = generateNumber(totalHamburger);
@@ -58,7 +51,6 @@ total_mole_hamburger = totalMole + totalHamburger;
 
 function runGame() {
 
-    console.log('total : ' + (total_mole_hamburger));
     if (startMole != (total_mole_hamburger)) {
         if (listOfNumbers[startMole-1] != '0'){
             let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
@@ -70,13 +62,11 @@ function runGame() {
                 selectedbutton.style.backgroundColor = "white";
                 selectedbutton.innerHTML = '<img src="assets/images/hamburger.png" />';
                 startMole+= 1;
-                    
             }
         }
         else {
             increaseLevel();
         }
-        
 }
 
 /* This function is to increase the level of the game from level 1 onwards */
@@ -96,7 +86,6 @@ function increaseLevel(){
     alert('Level ' + level + ' - ' + 'Ready , Steady ... Go!'  );
     total_mole_hamburger = totalMole + totalHamburger;
     level+=1;
-    
     runGame();
 }
 
@@ -111,10 +100,7 @@ function generateNumber(totalHamburger) {
     for (let x = 0; x < totalHamburger; x++) {
         positionHamburger[x] = Math.floor(Math.random() * 6);
     }
-   
-    console.log ('array of hamburger : ' + positionHamburger);
     noOfArrays = totalHamburger + 5;
-   /* console.log('noOfArrays : ' + noOfArrays);*/
     for (let i = 0; i<noOfArrays; i++){
 
         if (i == positionHamburger[0]) {
@@ -126,16 +112,13 @@ function generateNumber(totalHamburger) {
         } else {
             numbers[i] = Math.floor(Math.random() * 12) + 1;    
         }
-          
     }
-    console.log('generateNumber : ' + numbers);
     return numbers;
 }
 
 /* This function is when an game over event happens */
 function endGame(event) {
 
-    console.log ('End Game');
     document.getElementById("message").innerHTML = ('End Game');
     location.reload();
 }
@@ -143,7 +126,6 @@ function endGame(event) {
 /* This function is when user click the infor control button and will display the game info on screen */
 function showInfo(event) {
 
-    console.log ('Show Info');
     document.getElementById("message").innerHTML = ('Click stop button to refresh');
     var showInfo = document.createElement('h1');
     showInfo.textContent = 'Mollie is a very cheeky mole living in the northern part of England. She loves to pop into the house to steal your food. What you need to do is to hit Mollie when she appears. She also likes to eat your hamburgers. So when the hamburger appears, take it back from Mollie by clicking on it and you will get extra points.     <Press the red button to continue>';
@@ -159,33 +141,24 @@ function showInfo(event) {
 or is game over */
 function correct_click(number, user_clickbutton) {
 
-    console.log('Random No :' + number + ' User :' +user_clickbutton);
     if (number == user_clickbutton){
         
         let selectedbutton = document.getElementById(user_clickbutton);
         selectedbutton.innerHTML = '';
         score('10');
         
-        if (number == '0'){
-                
+        if (number == '0'){  
             selectedbutton.innerHTML = '';
-            score('10');
-                
+            score('10');    
         }
         whichButton+= 1;
         runGame();
-          
     } else {
-            let music = new Audio('assets/music/game_over.mp3');
             document.getElementById("message").innerHTML = ('Game Over'); 
             disable_button();
             alert('Game Over -  Click red button to end game...');
-            //music.play();
-            //throw ('Game Over');  
-            
-                       
-    }
-    
+            endGame();
+      }
 }
 
 /* This function is to keep track of scores of the game */
@@ -212,18 +185,19 @@ function disable_button() {
 
 /* This function is to display the Modal box at the beginning of the game */
 function modalBox () {
+    
     var modal = document.getElementById("myModal");
     var span = document.getElementsByClassName("close")[0];
     modal.style.display = "block";
     /* When the user clicks on <span> (x), close the modal */
     span.onclick = function() {
         modal.style.display = "none";
-    }
+    };
 
     /* When the user clicks anywhere outside of the modal, close it */
     window.onclick = function(event) {
         if (event.target == modal) {
             modal.style.display = "none";
         }
-    }
+    };
 }
