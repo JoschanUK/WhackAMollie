@@ -12,7 +12,6 @@ h2{
 body {
     background-color: white;
     font-family: "Jersey 10", sans-serif;
-   /* font-family: "Raleway", sans-serif;*/
     color: #445361;
     text-align: left;
 }
@@ -28,7 +27,6 @@ body {
 }
 
 /* Game layout */
-
 .background_image{
     max-width: 65%;
     max-height: 50%;
@@ -46,8 +44,8 @@ body {
     margin-left: auto;
     margin-right: auto;
     padding: 1%;
-    
 }
+
 .display_area {
     width: 15%;
     font-weight: 400;
@@ -328,7 +326,6 @@ body {
     }    
 }
 
-
 @media (max-width: 375px){
     
     .heading {
@@ -377,6 +374,7 @@ body {
         margin-top: 50px;
         
     }
+
     .btn--big {
         padding-top: 5px;
         border-radius: 50%;
@@ -483,14 +481,12 @@ body {
         margin-left: 30px;
         margin-right: auto;
         padding: 1%;
-        
     }
     .display_area {
         width: 20%;
         font-weight: 400;
         margin-left: 1px;
         color: whitesmoke;
-       
     }
     
     .game_controls{
@@ -500,8 +496,7 @@ body {
     #controls-area {
         width: 60%;
         margin-left: 10px;
-        margin-top: 50px;
-        
+        margin-top: 50px; 
     }
 
     .btn--big {
@@ -582,7 +577,6 @@ body {
         background-color: white;
     }    
 }
-
 
 /* The Modal (background) */
 .modal {

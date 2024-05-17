@@ -11,15 +11,15 @@ Mollie is a very cheeky mole living in the northern part of England. She loves t
 
 # Features
 
-In this section, we shows the users what to expect and what features are presented in this game.
+In this section, we show the users what to expect and what features are presented in this game.
 
 **3 Navigation buttons - Play game, Stop game, Info on game.**
 
-Play game - User has to click this red button to start a game.
+Play game - User has to click this blue button to start a game.
 
-Stop game - User will click this button when he wants to stop the game or to close the information tab.
+Stop game - User will click this blue button when he wants to stop the game or to close the information tab.
 
-Info on game - This is an introduction how to play the game. 
+Info on game - This is an introduction on how to play the game. 
 
 **Game Area - Main Screen**
 
