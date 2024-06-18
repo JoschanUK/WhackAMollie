@@ -51,6 +51,8 @@ total_mole_hamburger = totalMole + totalHamburger;
 
 function runGame() {
 
+    disable_button();
+    console.log("Test");
     if (startMole != (total_mole_hamburger)) {
         if (listOfNumbers[startMole-1] != '0'){
             let selectedbutton = document.getElementById(listOfNumbers[startMole-1]);
