@@ -1,6 +1,6 @@
 /* Style and Font used */
 
-*{
+{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -26,7 +26,6 @@ body {
 .heading {
     text-align: center;
     font-size: 4rem;
-    margin-left: 0;
     max-width: 830px;
 }
 
@@ -48,7 +47,7 @@ body {
     background-color: #E6ECF0;
     box-sizing: border-box;
     width: 85%;
-    height: 65vh;
+    height: 80vh;
     max-height: 600px;
     max-width: 830px;
     margin-left: 0;
@@ -77,8 +76,8 @@ body {
 /* Buttons */ 
 .btn_hamburger{
     position:absolute; 
-    top: 20%; 
-    left: 35%; 
+    top: 40%; 
+    left: 55%; 
     width: 105px;
     height: 110px;
     font-family: "Raleway", sans-serif;
@@ -194,6 +193,31 @@ body {
 }
 
 /* Media queries */
+@media (max-width: 1440px) {
+
+    .btn--big--control {
+        padding-top: 5px;
+        background-color: white;
+        border: 7px solid;
+        width: 90px;
+        height: 80px;
+        font-size: 3.2rem;
+        transition: all 0.5s;
+    }
+
+    .btn_hamburger{
+        position:absolute; 
+        top: 25%; 
+        left: 35%; 
+        width: 105px;
+        height: 110px;
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: white;
+        background-color: white;
+    }
+}
 
 @media (max-width: 768px) {
 
@@ -209,7 +233,7 @@ body {
 
     .btn_hamburger{
         position:absolute; 
-        top: 20%; 
+        top: 40%; 
         left: 45%; 
         width: 105px;
         height: 110px;
@@ -344,7 +368,7 @@ body {
     .btn_hamburger{
         position:absolute; 
         top: 25%; 
-        left: 55%; 
+        left: 65%; 
         width: 50px;
         height: 50px;
         font-family: "Raleway", sans-serif;
@@ -473,8 +497,8 @@ body {
 
     .btn_hamburger{
         position:absolute; 
-        top: 20%; 
-        left: 65%; 
+        top: 35%; 
+        left: 70%; 
         width: 50px;
         height: 50px;
         font-family: "Raleway", sans-serif;
@@ -600,7 +624,7 @@ body {
 
     .btn_hamburger{
         position:absolute; 
-        top: 20%; 
+        top: 35%; 
         left: 60%; 
         width: 50px;
         height: 50px;
