@@ -1,4 +1,11 @@
 /* Style and Font used */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .jersey-10-regular {
     font-family: "Jersey 10", sans-serif;
     font-weight: 400;
@@ -19,7 +26,9 @@ body {
 .heading {
     text-align: center;
     font-size: 4rem;
+    max-width: 830px;
 }
+
 
 .logo {
     height: 40px;
@@ -33,7 +42,7 @@ body {
 }
 
 .game-area {
-    background-image: url("../images/background.jpg");
+    background-image: url("../images/background.jpg"); 
     background-size: 100% 100%;
     background-color: #E6ECF0;
     box-sizing: border-box;
@@ -41,8 +50,8 @@ body {
     height: 65vh;
     max-height: 600px;
     max-width: 830px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    /*margin-right: auto;*/
     padding: 1%;
 }
 
@@ -64,7 +73,7 @@ body {
     margin-left: 10px;
 }
 
-/* Buttons */
+/* Buttons */ 
 .btn_hamburger{
     position:absolute; 
     top: 40%; 
@@ -156,13 +165,13 @@ body {
     color: white;
 }
 
-/* Tooltip container */
+/* Tooltip container */ 
 .tooltip {
     position: relative;
     display: inline-block;
 }
   
-  /* Tooltip text */
+  /* Tooltip text */ 
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
@@ -200,6 +209,12 @@ body {
 
 @media (max-width: 425px) {
     
+    .heading {
+        text-align: center;
+        font-size: 2rem;
+        margin-left: 0;
+    }
+
     img {
         width : 35px;
         height: 35px;
@@ -222,7 +237,7 @@ body {
         height: 65vh;
         max-height: 600px;
         max-width: 850px;
-        margin-left: 30px;
+        margin-left: 0;
         margin-right: auto;
         padding: 1%;  
     }
@@ -314,7 +329,7 @@ body {
 
     .btn_hamburger{
         position:absolute; 
-        top: 45%; 
+        top: 25%; 
         left: 65%; 
         width: 50px;
         height: 50px;
@@ -331,7 +346,9 @@ body {
     .heading {
         text-align: center;
         font-size: 2rem;
+        margin-left: 0;
     }
+
     h2{
         font-size: 1.5rem;
     }
@@ -350,7 +367,7 @@ body {
         height: 65vh;
         max-height: 600px;
         max-width: 830px;
-        margin-left: 30px;
+        margin-left: 0;
         margin-right: auto;
         padding: 1%;
     }
@@ -459,7 +476,9 @@ body {
     .heading {
         text-align: center;
         font-size: 2rem;
+        margin-left: 0;
     }
+
     h2{
         font-size: 1.5rem;
     }
@@ -478,10 +497,11 @@ body {
         height: 65vh;
         max-height: 600px;
         max-width: 830px;
-        margin-left: 30px;
+        margin-left: 0;
         margin-right: auto;
         padding: 1%;
     }
+    
     .display_area {
         width: 20%;
         font-weight: 400;
@@ -490,7 +510,7 @@ body {
     }
     
     .game_controls{
-        margin-top: 180%;
+        margin-top: 80%;
     }
     
     #controls-area {
@@ -567,7 +587,7 @@ body {
     .btn_hamburger{
         position:absolute; 
         top: 35%; 
-        left: 70%; 
+        left: 60%; 
         width: 50px;
         height: 50px;
         font-family: "Raleway", sans-serif;
