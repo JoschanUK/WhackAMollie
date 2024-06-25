@@ -195,7 +195,7 @@ body {
 }
 
 /* Media queries */
-@media (max-width: 1440px) {
+@media (min-width: 1440px) {
 
     .btn--big--control {
         padding-top: 5px;
@@ -211,6 +211,31 @@ body {
         position:absolute; 
         top: 25%; 
         left: 35%; 
+        width: 105px;
+        height: 110px;
+        font-family: "Raleway", sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1.2px;
+        color: white;
+        background-color: white;
+    }
+}
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .btn--big--control {
+        padding-top: 5px;
+        background-color: white;
+        border: 7px solid;
+        width: 90px;
+        height: 80px;
+        font-size: 3.2rem;
+        transition: all 0.5s;
+    }
+
+    .btn_hamburger{
+        position:absolute; 
+        top: 25%; 
+        left: 45%; 
         width: 105px;
         height: 110px;
         font-family: "Raleway", sans-serif;
@@ -247,7 +272,7 @@ body {
     }
 }
 
-@media (max-width: 425px) {
+@media (min-width: 425px) and (max-width: 767px) {
     
     .heading {
         text-align: center;
@@ -381,7 +406,7 @@ body {
     }    
 }
 
-@media (max-width: 375px){
+@media (min-width: 375px) and (max-width: 424px) {
     
     .heading {
         text-align: center;
@@ -511,7 +536,7 @@ body {
     }    
 }
 
-@media (max-width: 320px){
+@media (min-width: 320px) and (max-width: 374px) {
     
     .heading {
         text-align: center;
